@@ -1,80 +1,22 @@
-<div class="android-more-section">
-    <div class="android-section-title mdl-typography--display-1-color-contrast">Projects</div>
-    <div class="android-card-container mdl-grid">
-      <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-        <div class="mdl-card__media">
-          <img src="assets/images/death-star.jpg">
-        </div>
-        <div class="mdl-card__title">
-          <h4 class="mdl-card__title-text">Rockets</h4>
-        </div>
-        <div class="mdl-card__supporting-text">
-          <span class="mdl-typography--font-light mdl-typography--subhead">Rocket Launch (class D) @ Kelburn Park</span>
-        </div>
-        <div class="mdl-card__actions">
-          <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-            Video
-            <i class="material-icons">chevron_right</i>
-          </a>
-        </div>
-      </div>
-
-      <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-        <div class="mdl-card__media">
-          <img src="assets/images/roster_generator.jpg">
-        </div>
-        <div class="mdl-card__title">
-          <h4 class="mdl-card__title-text">Roster Generator</h4>
-        </div>
-        <div class="mdl-card__supporting-text">
-          <span class="mdl-typography--font-light mdl-typography--subhead"> Automated Rostering System that learns ... (not finished)</span>
-        </div>
-        <div class="mdl-card__actions">
-          <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-            View Source
-            <i class="material-icons">chevron_right</i>
-          </a>
-        </div>
-      </div>
-
-      <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-        <div class="mdl-card__media">
-          <img src="assets/images/elf.jpg" height=200px>
-        </div>
-        <div class="mdl-card__title">
-          <h4 class="mdl-card__title-text">SCARA</h4>
-        </div>
-        <div class="mdl-card__supporting-text">
-          <span class="mdl-typography--font-light mdl-typography--subhead">
-            Selective Compliance Assembly Robot Arm.
-          </span>
-        </div>
-        <div class="mdl-card__actions">
-          <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-            View Source
-            <i class="material-icons">chevron_right</i>
-          </a>
-        </div>
-      </div>
-
-      <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-        <div class="mdl-card__media">
-          <img src="assets/images/barbie.jpg">
-        </div>
-        <div class="mdl-card__title">
-          <h4 class="mdl-card__title-text">Welcome to the barbie2016!</h4>
-        </div>
-        <div class="mdl-card__supporting-text">
-          <span class="mdl-typography--font-light mdl-typography--subhead">
-            Autonomous Vehicle Challenge. AI, PWM, PID, RasPi
-          </span>
-        </div>
-        <div class="mdl-card__actions">
-          <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-            View Source
-            <i class="material-icons">chevron_right</i>
-          </a>
-        </div>
-      </div>
+<div class="content">
+  <div id="first" class="card" *ngFor="let projectitem of projects" [class.selected]="projectitem === selectedProject" (click)="onSelect(projectitem)">
+    <img src="{{projectitem.image}}" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4>
+        <b>{{projectitem.title}}</b>
+      </h4>
+      <p>{{projectitem.description}}</p>
     </div>
   </div>
+
+  <div *ngIf="selectedProject">
+    <h2>{{selectedProject.title | uppercase}} Details</h2>
+    <div>
+      <span>id: </span>{{selectedProject.description}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedProject.title" placeholder="title">
+      </label>
+    </div>
+  </div>
+</div>

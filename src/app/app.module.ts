@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+
 
 import { AppComponent } from './app.component';
-import { ProjectBoxItemComponent } from './project-box-item/project-box-item.component';
 import { ProjectButtonComponent } from './project-button/project-button.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { AboutMeComponent } from './about-me/about-me.component';
@@ -13,16 +14,16 @@ import { ProjectsComponent } from './projects/projects.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ProjectBoxItemComponent,
     ProjectButtonComponent,
     AboutMeComponent,
     HomeComponent,
     DashboardComponent,
-    ProjectsComponent
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
