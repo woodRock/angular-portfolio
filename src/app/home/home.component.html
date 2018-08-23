@@ -1,91 +1,23 @@
 <div class="content">
-  <a name=""></a>
-  <div class="card">
-    <div class="">Hi, I'm Jesse</div>
-    <div class="">Welcome to my portfolio of work</div>
-    <div class="">
-      <a routerLink="/home">
-        <img src="assets/images/git.png" height=20px width=20px>
-        <b>See also</b> 
-        Github&nbsp;
-        <i class="fa fa-chevron-right"></i>
-      </a>
-    </div>
-    <a routerLink="/home">
-      <button class="">
-        <i class="fa fa-chevron-down"></i>
-      </button>
-    </a>
-  </div>
-  <div class="card">
-    <a name=""></a>
-    <div class="">Speaking many languages</div>
-    <div class="">
-      <div class="">
-        <a class="" href="">
-          <img class="" src="assets/images/c-icon.png">
-        </a>
-        <a class="" href="">C</a>
-      </div>
-      <div class="">
-        <a class="" href="">
-          <img class="" src="assets/images/java-icon.png">
-        </a>
-        <a class="" href="">Java</a>
-      </div>
-      <div class="">
-        <a class="" href="">
-          <img class="" src="assets/images/python-icon.png">
-        </a>
-        <a class="" href="">Python</a>
-      </div>
-      <div class="">
-        <a class="" href="">
-          <img class="" src="assets/images/latex-icon.png">
-        </a>
-        <a class="" href="">LaTeX</a>
-      </div>
-      <div class="">
-        <a class="" href="">
-          <img class="" src="assets/images/bash-icon.png">
-        </a>
-        <a class="" href="">Bash</a>
-      </div>
+  <div class="card" *ngFor="let ftr of features" [class.selected]="ftr === selectedFeature" (click)="onSelect(ftr)">
+    <img src="{{ftr.backgroundImage}}" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4>
+        <b>{{ftr.title}}</b>
+      </h4>
+      <p>{{ftr.description}}</p>
     </div>
   </div>
-  <div class="card">
-    <div class="">
-      <div class="">
-        <div class="">Learn more about me...</div>
-        <p class="">
-          My name is Jesse Wood. I am student at Victora University studying towards a degree in Software Engineering. I am familiar
-          with, but by know means an expert...
-        </p>
-        <p>
-          <a class="" routerLink="/aboutme">
-            About Me&nbsp;
-            <i class="fa fa-chevron-right"></i>
-          </a>
-        </p>
-      </div>
+
+  <div *ngIf="selectedFeature">
+    <h2>{{selectedFeature.title | uppercase}} Details</h2>
+    <div>
+      <span>id: </span>{{selectedFeature.description}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedFeature.title" placeholder="title">
+      </label>
     </div>
-  </div>
-  <div class="card">
-    <div class="">
-      <div class="">The-Finding-of-I-Zack</div>
-      <p class="">
-        This is a sub-aquatic immersive 2D dungeon crawler that will sink your expectations to new depths.
-        <br>
-        <a href="" class="">
-          View Source&nbsp;
-            <i class="fa fa-chevron-right"></i>
-        </a>
-        
-      </p>
-    </div>
-    <div class=""></div>
   </div>
 </div>
 
-<a href="" target="" id="" class="">View Source</a>
-<script src=""></script>
