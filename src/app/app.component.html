@@ -6,12 +6,78 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<div class="title">
-<h1 class="">{{title}}</h1>
-  <ul class="navbar-wrapper">
-    <li class="navbar-item"><a routerLink="/home">Home</a></li>
-    <li class="navbar-item"><a routerLink="/projects">Projects</a></li>
-    <li class="navbar-item"><a routerLink="/aboutme">About Me</a></li>
-  </ul>
+
+<!-- Icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div id="wrapper">
+
+  <div id="header">
+  </div>
+  <!-- #header -->
+  <div class="title">
+    <h1 class="">{{title}}</h1>
+    <ul class="navbar-wrapper">
+      <li class="navbar-item">
+        <a routerLink="/home">Home</a>
+      </li>
+      <li class="navbar-item">
+        <a routerLink="/projects">Projects</a>
+      </li>
+      <li class="navbar-item">
+        <a routerLink="/aboutme">About Me</a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="content">
+  </div>
+  <!-- #content -->
+  <router-outlet></router-outlet>
+  <div id="footer">
+  </div>
+
+  <!-- #footer -->
+  <footer class="footer">
+    <div class="">
+      <div class="">
+        <button class=""></button>
+        &nbsp;
+        <button class=""></button>
+        &nbsp;
+        <button class=""></button>
+      </div>
+      <div class="">
+        <a class="" href="">
+          Back to Top
+          <i class="fa fa-caret-up"></i>
+        </a>
+      </div>
+    </div>
+    <div class="">
+    </div>
+    <div class="">
+      <a class="" id="">
+        Social
+        <i class="fa fa-angle-up"></i>
+      </a>
+      <ul class="" for="">
+        <li class="">Discord</li>
+        <li class="">Snapchat</li>
+        <li class="">Mail</li>
+      </ul>
+      <a class="" id="">
+        For Developers
+        <i class="fa fa-angle-down"></i>
+      </a>
+      <ul class="" for="">
+        <li class="">View Source</li>
+        <li class="">Collaborate</li>
+      </ul>
+      <a class="" routerLink="/aboutme">About Me</a>
+    </div>
+  </footer>
+
 </div>
-<router-outlet></router-outlet>
+<!-- #wrapper -->

@@ -21,18 +21,23 @@ html {
 }
 
 .navbar-wrapper {
-  list-style-type: none;
-  margin: auto;
-  padding: 0;
   overflow: hidden;
   background-color: #333;
+  border: 1px solid #ccc;
+  border-width: 1px 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-.navbar-item {
-  float: left;
+.navbar-wrapper li {
+  display: inline;
 }
 
-.navbar-item a {
+.navbar-wrapper a {
+  display: inline-block;
+  padding: 10px;
   display: block;
   color: white;
   text-align: center;
@@ -40,21 +45,27 @@ html {
   text-decoration: none;
 }
 
-.navbar-item a:link, .navbar-item a:visited {
+.navbar-wrapper a:link,
+.navbar-wrapper a:visited {
   background-color: rgb(107, 107, 107);
   color: white;
   padding: 14px 25px;
-  text-align: center; 
+  text-align: center;
   text-decoration: none;
   display: inline-block;
 }
 
-.navbar-item a:hover, .navbar-item a:active {
+.navbar-wrapper a:hover,
+.navbar-wrapper a:active {
   background-color: #f44336;
   text-decoration: none;
 }
 
-.navbar-item a:active {
-  background-color: #f44336;
-  text-decoration: none;
+.footer {
+  background: #ffab62;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
