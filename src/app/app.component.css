@@ -17,44 +17,12 @@ html {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-.navbar-wrapper {
-  overflow: hidden;
-  background-color: #333;
-  border: 1px solid #ccc;
-  border-width: 1px 0;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.navbar-wrapper li {
-  display: inline;
-}
-
-.navbar-wrapper a {
-  display: inline-block;
-  padding: 10px;
+#view-source {
+  position: fixed;
   display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.navbar-wrapper a:link,
-.navbar-wrapper a:visited {
-  background-color: rgb(107, 107, 107);
-  color: white;
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.navbar-wrapper a:hover,
-.navbar-wrapper a:active {
-  background-color: wheat;
-  color: black;
-  text-decoration: none;
+  right: 0;
+  bottom: 0;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  z-index: 900;
 }

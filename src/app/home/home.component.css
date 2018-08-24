@@ -19,7 +19,6 @@
   width:100%;
   background: white;
   margin-bottom: 20px;
-  background:'{{ftr.backgroundImage}}';
 }
 
 /* Add rounded corners to the top left and the top right corner of the image */
@@ -34,3 +33,42 @@
   position: relative;
   top: 120px;
 }
+
+.feature {
+  position: relative;
+  height: 800px;
+  width: auto;
+  background-color: #f3f3f3;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.feature-font {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1;
+  color: #ffffff;
+  font-weight: 500;
+  font: 50px;
+}
+
+.slogan {
+  font-size: 60px;
+  padding-top: 160px;
+}
+
+.sub-slogan {
+  font-size: 21px;
+  margin: 0 16px;
+  padding-top: 8px;
+}
+
+.github-link {
+  font-size: 21px;
+  padding-top: 400px;
+}
+
+  .github-link a {
+    text-decoration: none;
+    color: #767777;
+    font-weight: 300;
+  }

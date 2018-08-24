@@ -1,23 +1,17 @@
-<div class="content">
-  <div class="card" *ngFor="let ftr of features" [class.selected]="ftr === selectedFeature" (click)="onSelect(ftr)">
-    <img src="{{ftr.backgroundImage}}" alt="Avatar" style="width:100%">
-    <div class="container">
-      <h4>
-        <b>{{ftr.title}}</b>
-      </h4>
-      <p>{{ftr.description}}</p>
+<div class="content mdl-layout__content">
+  <div class="feature mdl-typography--text-center" *ngFor="let ftr of features" [class.selected]="ftr === selectedFeature"
+    (click)="onSelect(ftr)" [style.background]="'url(' + ftr.backgroundImage + ')'">
+    <div class="feature-font slogan">
+      {{ftr.title}}
+    </div>
+    <div class="feature-font sub-slogan">{{ftr.description}}</div>
+    <div class="feature-font github-link">
+      <a>
+        <img src="{{ftr.linkImage}}" height=20px width=20px>
+        <b>
+          See Also
+        </b>
+        {{ftr.link}}
+      </a>
     </div>
   </div>
-
-  <div *ngIf="selectedFeature">
-    <h2>{{selectedFeature.title | uppercase}} Details</h2>
-    <div>
-      <span>id: </span>{{selectedFeature.description}}</div>
-    <div>
-      <label>name:
-        <input [(ngModel)]="selectedFeature.title" placeholder="title">
-      </label>
-    </div>
-  </div>
-</div>
-

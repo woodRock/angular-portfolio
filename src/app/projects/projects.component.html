@@ -1,23 +1,36 @@
-<div class="content">
-  <div id="first" class="card" *ngFor="let projectitem of projects" [class.selected]="projectitem === selectedProject" (click)="onSelect(projectitem)">
-    <img src="{{projectitem.image}}" alt="Avatar" style="width:100%">
-    <div class="container">
-      <h4>
-        <b>{{projectitem.title}}</b>
-      </h4>
-      <p>{{projectitem.description}}</p>
-    </div>
-  </div>
-
-  <div *ngIf="selectedProject">
-    <h2>{{selectedProject.title | uppercase}} Details</h2>
-    <div>
-      <span>id: </span>{{selectedProject.description}}</div>
-    <div>
-      <label>name:
-        <input [(ngModel)]="selectedProject.title" placeholder="title">
-      </label>
+<div class="content mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <div class="projects">
+    <div class="mdl-grid">
+      <div id="first" class="card mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp"
+        *ngFor="let projectitem of projects" [class.selected]="projectitem === selectedProject" (click)="onSelect(projectitem)">
+        <div class="mdl-card__media card-image">
+          <img src="{{projectitem.image}}" alt="Avatar">
+        </div>
+        <div class="mdl-card__title">
+          <h4>
+            <b>{{projectitem.title.replace(" ","-") | lowercase}}</b>
+          </h4>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <p>{{projectitem.description}}</p>
+        </div>
+        <div class="button mdl-card__actions">
+          <a class="mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+            View Source
+            <i class="material-icons">chevron_right</i>
+          </a>
+        </div>
+      </div>
+      <div *ngIf="selectedProject">
+        <h2>{{selectedProject.title | uppercase}} Details</h2>
+        <div>
+          <span>id: </span>{{selectedProject.description}}</div>
+        <div>
+          <label>name:
+            <input [(ngModel)]="selectedProject.title" placeholder="title">
+          </label>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
