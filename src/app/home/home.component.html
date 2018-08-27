@@ -1,3 +1,4 @@
+
 <div class="content mdl-layout__content">
   <div class="feature mdl-typography--text-center" *ngFor="let ftr of features" [class.selected]="ftr === selectedFeature"
     (click)="onSelect(ftr)" [style.background]="'url(' + ftr.backgroundImage + ')'">
@@ -6,7 +7,7 @@
     </div>
     <div class="feature-font sub-slogan">{{ftr.description}}</div>
     <div class="feature-font github-link">
-      <a>
+      <a routerLink="{{ftr.link}}">
         <img src="{{ftr.linkImage}}" height=20px width=20px>
         <b>
           See Also
@@ -15,3 +16,13 @@
       </a>
     </div>
   </div>
+</div>
+<div class="project mdl-typography--text-center">
+  <div class="project-slogan feature-font">
+    My Projects
+  </div>
+    <app-projects></app-projects>
+</div>
+
+
+

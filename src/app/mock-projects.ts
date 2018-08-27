@@ -11,5 +11,7 @@ export const PROJECTS: ProjectItem[] = [
 
   { title:"Barbie2016", description: 'Autonomous Vehicle Challenge.', image:'assets/images/barbie.jpg', button:null },
 
-  { title:"Portfolio Website", description: 'This is my portfolio website.', image:'assets/images/bg_2880.jpg', button:null }
+  {title: "The-Finding-of-I-Zack", description: "This is a sub-aquatic immersive 2D dungeon crawler that will sink your expectations to new depths.",
+  image: "assets/images/finding.jpg",
+  button:null},
 ];
