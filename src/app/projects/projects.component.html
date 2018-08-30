@@ -4,7 +4,7 @@
       <div id="first" class="card mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp"
         *ngFor="let projectitem of projects" [class.selected]="projectitem === selectedProject" (click)="onSelect(projectitem)">
         <div class="mdl-card__media card-image">
-          <img src="{{projectitem.image}}" alt="Avatar">
+          <img src="{{projectitem.project_image}}" alt="Avatar">
         </div>
         <div class="mdl-card__title">
           <h4>
@@ -16,7 +16,7 @@
         </div>
         <div class="button mdl-card__actions">
           <a class="mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-            View Source
+            {{projectitem.link_text}}
             <i class="material-icons">chevron_right</i>
           </a>
         </div>

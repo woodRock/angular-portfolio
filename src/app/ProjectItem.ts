@@ -3,7 +3,7 @@ import { ProjectButtonComponent } from "./project-button/project-button.componen
 export class ProjectItem {
     title: string;
     description: string;
-    image: string;
-    button: ProjectButtonComponent
+    project_image: string;
+    link_text: string;
 }
 

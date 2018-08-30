@@ -8,7 +8,6 @@ import { ProjectButtonComponent } from './project-button/project-button.componen
 import { AppRoutingModule } from './/app-routing.module';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { HomeComponent } from './home/home.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
@@ -17,7 +16,6 @@ import { ProjectsComponent } from './projects/projects.component';
     ProjectButtonComponent,
     AboutMeComponent,
     HomeComponent,
-    DashboardComponent,
     ProjectsComponent,
   ],
   imports: [

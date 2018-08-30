@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectButtonComponent implements OnInit {
 
-  constructor(public text: string, public link: string) { }
+  constructor() { }
 
   ngOnInit() {
   }
