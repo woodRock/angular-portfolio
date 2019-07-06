@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":root {\r\n    --main-color:#1a53ff;\r\n    --secondary-color: #ff9900; \r\n    --third-color: whitesmoke;\r\n    --title-text-color: black;\r\n    --title-font: \"Comic Sans MS\";\r\n}\r\n\r\nbody{\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\nheader{ \r\n    display: flex;\r\n    background: #333;\r\n    justify-content: center;\r\n}\r\n\r\n.box{\r\n    display: flex;\r\n    font-size: 12pt;\r\n    color: var(--title-text-color);\r\n    justify-content: center;\r\n    align-items: center;\r\n}"
+module.exports = ":root {\r\n    --main-color:#005082;\r\n    --secondary-color: #ff9600; \r\n    --third-color: whitesmoke;\r\n    --fourth-color: black;\r\n    --title-text-color: --third-color;\r\n    --logo-font: \"Comic Sans MS\";\r\n    --title-font: \"Helvetica\";\r\n}\r\n\r\nbody{\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\nheader{ \r\n    display: flex;\r\n    background: #333;\r\n    justify-content: center;\r\n}\r\n\r\n.box{\r\n    display: flex;\r\n    font-size: 12pt;\r\n    color: var(--title-text-color);\r\n    justify-content: center;\r\n    align-items: center;\r\n}"
 
 /***/ }),
 

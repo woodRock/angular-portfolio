@@ -138,7 +138,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "body,\r\nhtml {\r\n  background: var(--third-color);\r\n  -ms-overflow-style: -ms-autohiding-scrollbar;\r\n}\r\n\r\n.title {\r\n  width: 100%; /* Full width */\r\n  margin: auto;\r\n  background-color: var(--third-color);\r\n}\r\n\r\n.sticky{\r\n  position: fixed;\r\n  top: 0;\r\n  overflow: hidden;\r\n  z-index: 10;\r\n}\r\n\r\n::-webkit-scrollbar {\r\n  display: none;\r\n}\r\n\r\n.active {\r\n  background-color: var(--secondary-color);\r\n  color: var(--main-color);\r\n  outline: 0;\r\n  text-decoration: none;\r\n}\r\n\r\n.navigation-padding {\r\n  padding-top: 30px;\r\n}\r\n\r\n.navigation {\r\n  text-decoration: none;\r\n  font-family: var(--title-font);\r\n  color: var(--title-text-color);\r\n  width: 50%;\r\n}\r\n\r\n.navigation:hover {\r\n  background-color: var(--main-color);\r\n  transition: left 300ms linear;\r\n}\r\n\r\na:hover {\r\n  text-decoration: none;\r\n}\r\n\r\n.main-title {\r\n  color: var(--title-text-color);\r\n  background-color: var(--third-color);\r\n  position: fixed;\r\n  left: 47%;\r\n}\r\n\r\n.title-font {\r\n  font-family: var(--title-font);\r\n  font-size: 20pt;\r\n}\r\n\r\n.left, .left:hover {\r\n  text-decoration: none;\r\n  text-align: center;\r\n  width: 50%;\r\n  float:left;\r\n}\r\n\r\n.right, .right:hover {\r\n  text-decoration: none;\r\n  text-align: center;\r\n  width: 50%;\r\n  float:right;\r\n}\r\n\r\n.link-font {\r\n  font-size: 15pt;\r\n}"
+module.exports = "body,\r\nhtml {\r\n  background: var(--third-color);\r\n  -ms-overflow-style: -ms-autohiding-scrollbar;\r\n}\r\n\r\na:hover {\r\n  text-decoration: none !important;\r\n  color: var(--title-text-color) !important;\r\n}\r\n\r\n::-webkit-scrollbar {\r\n  display: none;\r\n}\r\n\r\n.title {\r\n  width: 100%; /* Full width */\r\n  margin: auto;\r\n  background-color: var(--third-color);\r\n}\r\n\r\n.sticky{\r\n  position: fixed;\r\n  top: 0;\r\n  overflow: hidden;\r\n  z-index: 10;\r\n}\r\n\r\n.active {\r\n  background-color: var(--main-color) !important;\r\n  color: var(--main-color);\r\n  outline: 0;\r\n  text-decoration: none;\r\n}\r\n\r\n.navigation-padding {\r\n  padding-top: 30px;\r\n}\r\n\r\n.navigation {\r\n  text-decoration: none;\r\n  background-color: var(--fourth-color);\r\n  color: var(--third-color);\r\n  width: 50%;\r\n}\r\n\r\n.navigation:hover {\r\n  background-color: var(--secondary-color);\r\n  transition: left 1000ms linear;\r\n}\r\n\r\n.main-title {\r\n  color: var(--title-text-color);\r\n  background-color: var(--third-color);\r\n  position: fixed;\r\n  left: 49%;\r\n}\r\n\r\n.logo-font {\r\n  font-family: var(--logo-font);\r\n  font-size: 20pt;\r\n}\r\n\r\n.title-font {\r\n  font-family: var(--title-font);\r\n  font-size: 20pt;\r\n}\r\n\r\n.left, .left:hover {\r\n  text-decoration: none;\r\n  text-align: center;\r\n  width: 50%;\r\n  float:left;\r\n}\r\n\r\n.right, .right:hover {\r\n  text-decoration: none;\r\n  text-align: center;\r\n  width: 50%;\r\n  float:right;\r\n}\r\n\r\n.link-font {\r\n  font-size: 15pt;\r\n}"
 
 /***/ }),
 
@@ -344,7 +344,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FEATURES", function() { return FEATURES; });
 var FEATURES = [
     { title: "Hi, I'm Jesse",
-        description: "Welcome to my portfolio of work", backgroundImage: "assets/images/features/programming.png",
+        description: "Welcome to my portfolio of work", backgroundImage: "assets/images/features/programming-2.jpg",
         linkImage: "assets/images/logo.png",
         link: "Github" },
     { title: "Learn more about me...",
@@ -389,7 +389,7 @@ var PROJECTS = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* On mouse-over, add a deeper shadow */\r\n\r\n.card:hover {\r\n  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n/* Add some padding inside the card container */\r\n\r\n.container {\r\n  padding: 2px 16px;\r\n}\r\n\r\n.card {\r\n  margin: auto;\r\n  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);\r\n  transition: 0.3s;\r\n  border-radius: 5px;\r\n  /* 5px rounded corners */\r\n  width: 40%;\r\n  background: var(--third-color);\r\n  margin-bottom: 20px;\r\n  height: 400px;\r\n  width: 250px;\r\n}\r\n\r\n/* Add rounded corners to the top left and the top right corner of the image */\r\n\r\nimg {\r\n  max-width: 100%;\r\n  max-height: 300px;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n}\r\n\r\n.content {\r\n  margin: auto;\r\n  background: var(--third-color);\r\n  display: block;\r\n  position: relative;\r\n  top: 120px;\r\n}\r\n\r\n.projects {\r\n  width: 100%;\r\n  margin: auto;\r\n}\r\n\r\n.button a {\r\n  text-decoration: none;\r\n}\r\n\r\n.button a:hover {\r\n  background-color: var(--secondary-color);\r\n}\r\n\r\n.square {\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  width:250px;\r\n  height:150px;\r\n}\r\n"
+module.exports = "/* On mouse-over, add a deeper shadow */\r\n\r\n.card:hover {\r\n  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n/* Add some padding inside the card container */\r\n\r\n.container {\r\n  padding: 2px 16px;\r\n}\r\n\r\n.card {\r\n  margin: auto;\r\n  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);\r\n  transition: 0.3s;\r\n  border-radius: 5px;\r\n  /* 5px rounded corners */\r\n  width: 40%;\r\n  background: var(--third-color);\r\n  margin-bottom: 20px;\r\n  height: 400px;\r\n  width: 250px;\r\n}\r\n\r\n/* Add rounded corners to the top left and the top right corner of the image */\r\n\r\nimg {\r\n  max-width: 100%;\r\n  max-height: 300px;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n}\r\n\r\n.content {\r\n  margin: auto;\r\n  background: var(--third-color);\r\n  display: block;\r\n  position: relative;\r\n  top: 120px;\r\n}\r\n\r\n.projects {\r\n  width: 100%;\r\n  margin: auto;\r\n}\r\n\r\n.button a {\r\n  text-decoration: none;\r\n  background-color: var(--fourth-color);\r\n  color: var(--third-color);\r\n}\r\n\r\n.button a:hover {\r\n  background-color: var(--secondary-color);\r\n}\r\n\r\n.square {\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  width:250px;\r\n  height:150px;\r\n}\r\n"
 
 /***/ }),
 
@@ -431,9 +431,6 @@ var ProjectsComponent = /** @class */ (function () {
     function ProjectsComponent() {
         this.projects = _mock_projects__WEBPACK_IMPORTED_MODULE_1__["PROJECTS"];
     }
-    ProjectsComponent.prototype.onSelect = function (p) {
-        this.selectedProject = p;
-    };
     ProjectsComponent.prototype.ngOnInit = function () {
     };
     ProjectsComponent = __decorate([
@@ -526,7 +523,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p [class]=\"'main-title' + ' ' + 'title-font' + ' '+'title'\">{{typewriter_display}}</p>"
+module.exports = "<p [class]=\"'main-title' + ' ' + 'logo-font' + ' '+'title'\">{{typewriter_display}}</p>"
 
 /***/ }),
 
@@ -553,7 +550,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var TitleComponent = /** @class */ (function () {
     function TitleComponent() {
-        this.typewriter_text = "woodRock";
+        this.typewriter_text = "wR";
         this.typewriter_display = "";
     }
     TitleComponent.prototype.typingCallback = function (that) {
@@ -561,7 +558,6 @@ var TitleComponent = /** @class */ (function () {
         var current_length = that.typewriter_display.length;
         if (current_length < total_length) {
             that.typewriter_display += that.typewriter_text[current_length];
-            setTimeout(that.typingCallback, 500, that);
         }
         else {
             if (that.typewriter_display.slice(-1) == '|') {
@@ -570,8 +566,8 @@ var TitleComponent = /** @class */ (function () {
             else {
                 that.typewriter_display += "|";
             }
-            setTimeout(that.typingCallback, 500, that);
         }
+        setTimeout(that.typingCallback, 500, that);
     };
     TitleComponent.prototype.ngOnInit = function () {
         this.typingCallback(this);
