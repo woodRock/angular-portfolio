@@ -1,0 +1,57 @@
+/* Add rounded corners to the top left and the */
+.content{
+  background: var(--third-color);
+  background-color: var(--third-color);
+  display: block;
+  position: relative;
+}
+
+.feature {
+  position: relative;
+  height: 800px;
+  width: auto;
+  background-color: var(--third-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.feature-font {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1;
+  color: var(--third-color);
+  font-weight: 500;
+  font: 50px;
+}
+
+.slogan {
+  font-size: 60px;
+  padding-top: 160px;
+}
+
+.sub-slogan {
+  font-size: 21px;
+  margin: 0 16px;
+  padding-top: 8px;
+}
+
+.github-link {
+  font-size: 21px;
+  padding-top: 400px;
+}
+
+.github-link a {
+  text-decoration: none;
+  color: var(--third-color);
+  font-weight: 300;
+}
+
+/* Gifs appear when mouse hovers over them */
+/* ref: https://codepen.io/QDeltaE/pen/VWGYOB */
+.static {
+  position:absolute;
+  background: white;
+}
+
+.static:hover {
+  opacity:0;
+}

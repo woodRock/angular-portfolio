@@ -1,0 +1,22 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+:root {
+    --main-color:#005082;
+    --secondary-color: #ff9600;
+    --third-color: white;
+    --fourth-color: black;
+    --background-color: #030406;
+    --title-text-color: --third-color;
+    --logo-font: "Comic Sans MS";
+    --title-font: "Helvetica";
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+header{
+    display: flex;
+    justify-content: center;
+}
