@@ -28,4 +28,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     return this._features;
   }
 
+  //test
+
 }
