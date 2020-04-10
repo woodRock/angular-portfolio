@@ -1,4 +1,4 @@
-import {Entity} from './entity.model'
+import {Entity} from './entity.model';
 
 export interface Project extends Entity {
   title?: string;

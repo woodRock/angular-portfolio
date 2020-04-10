@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {SocialService} from '../../services/social.service';
 import {Social} from '../../models/social.model';
-import {Subscription} from "rxjs";
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-about-me',
@@ -17,10 +17,10 @@ export class AboutMeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.subscription = this.service.list().subscribe(social => {
       this._social = social;
-    })
+    });
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.subscription.unsubscribe();
   }
 

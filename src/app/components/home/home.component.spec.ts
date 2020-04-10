@@ -1,21 +1,21 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {HomeComponent} from './home.component';
-import {RouterTestingModule} from "@angular/router/testing";
-import {AngularFirestore} from "@angular/fire/firestore";
-import {Feature} from "../../models/feature.model";
-import {of} from "rxjs";
+import {RouterTestingModule} from '@angular/router/testing';
+import {AngularFirestore} from '@angular/fire/firestore';
+import {Feature} from '../../models/feature.model';
+import {of} from 'rxjs';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
-  let input: Feature[] = [];
-  let data = of(input);
-  let collectionSnub = {
+  const input: Feature[] = [];
+  const data = of(input);
+  const collectionSnub = {
     snapshotChanges: jasmine.createSpy('snapshotChanges').and.returnValue(data)
-  }
-  let angularFireSnub = {
+  };
+  const angularFireSnub = {
     collection: jasmine.createSpy('collection').and.returnValue(collectionSnub)
-  }
+  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({

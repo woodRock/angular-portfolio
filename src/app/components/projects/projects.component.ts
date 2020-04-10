@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ProjectService} from '../../services/project.service';
 import {Project} from '../../models/project.model';
-import {Subscription} from "rxjs";
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-projects',
@@ -17,7 +17,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.subscription = this.service.list().subscribe(projects => {
       this._projects = projects;
-    })
+    });
   }
 
   ngOnDestroy() {

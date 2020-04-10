@@ -1,23 +1,23 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {ProjectsComponent} from './projects.component';
-import {SortGridPipe} from "../../util/sort-grid.pipe";
-import {TimeAgoPipe} from "time-ago-pipe";
-import {AngularFirestore} from "@angular/fire/firestore";
-import {Project} from "../../models/project.model";
-import {of} from "rxjs";
+import {SortGridPipe} from '../../util/sort-grid.pipe';
+import {TimeAgoPipe} from 'time-ago-pipe';
+import {AngularFirestore} from '@angular/fire/firestore';
+import {Project} from '../../models/project.model';
+import {of} from 'rxjs';
 
 describe('ProjectsComponent', () => {
 
   let component: ProjectsComponent;
   let fixture: ComponentFixture<ProjectsComponent>;
-  let input: Project[] = [];
-  let data = of(input);
-  let collectionSnub = {
+  const input: Project[] = [];
+  const data = of(input);
+  const collectionSnub = {
     snapshotChanges: jasmine.createSpy('snapshotChanges').and.returnValue(data)
-  }
-  let angularFireSnub = {
+  };
+  const angularFireSnub = {
     collection: jasmine.createSpy('collection').and.returnValue(collectionSnub)
-  }
+  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -44,14 +44,14 @@ describe('ProjectsComponent', () => {
   });
 
   it('should use hyphen case for projects', () => {
-    const test: string = "project with spaces";
-    const expected: string = "project-with-spaces";
+    const test = 'project with spaces';
+    const expected = 'project-with-spaces';
     expect(component.getFolderName(test)).toEqual(expected);
   });
 
   it('should use lower case for projects', () => {
-    const test: string = "Project With Upper Case";
-    const expected: string = "project-with-upper-case";
+    const test = 'Project With Upper Case';
+    const expected = 'project-with-upper-case';
     expect(component.getFolderName(test)).toEqual(expected);
   });
 });

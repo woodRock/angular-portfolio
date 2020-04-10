@@ -1,7 +1,7 @@
-import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore'
-import {Observable} from 'rxjs'
-import {map} from 'rxjs/operators'
-import {Entity} from '../models/entity.model'
+import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
+import {Entity} from '../models/entity.model';
 
 function serialize<T>(object: T) {
   return JSON.parse(JSON.stringify(object));
@@ -30,9 +30,9 @@ export class CrudService<T extends Entity> {
             ...entity
           };
           resolve(newEntity);
-        })
+        });
       }
-    })
+    });
   }
 
   get(id: string): Observable<T> {
@@ -47,7 +47,7 @@ export class CrudService<T extends Entity> {
             return { id: payloadId, ...data };
           }
         })
-      )
+      );
   }
 
   list(): Observable<T[]> {
@@ -57,13 +57,13 @@ export class CrudService<T extends Entity> {
           const data = a.payload.doc.data() as T;
           data.id = a.payload.doc.id;
           return data;
-        })
+        });
       })
-    )
+    );
   }
 
   update(entity: T): Promise<T> {
-    return new Promise<T>((resolve,reject) => {
+    return new Promise<T>((resolve, reject) => {
       this.collection
         .doc<T>(entity.id as string)
         .set(serialize(entity))
@@ -76,7 +76,7 @@ export class CrudService<T extends Entity> {
   }
 
   delete(id: string): Promise<void> {
-    return new Promise<void>((resolve,reject) => {
+    return new Promise<void>((resolve, reject) => {
       this.collection
         .doc<T>(id)
         .delete()

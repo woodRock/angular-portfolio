@@ -1,17 +1,17 @@
 import {TestBed} from '@angular/core/testing';
 import {CrudService} from './crud.service';
-import {Feature} from "../models/feature.model";
-import {AngularFirestore} from "@angular/fire/firestore";
+import {Feature} from '../models/feature.model';
+import {AngularFirestore} from '@angular/fire/firestore';
 
 describe('CrudService', () => {
 
-  let crudServiceSnub = {
+  const crudServiceSnub = {
 
-  }
+  };
 
-  let angularFireSnub = {
+  const angularFireSnub = {
 
-  }
+  };
 
   beforeEach(() => TestBed.configureTestingModule({
     providers: [

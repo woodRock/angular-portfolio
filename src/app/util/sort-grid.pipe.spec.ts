@@ -1,10 +1,10 @@
 import {TestBed} from '@angular/core/testing';
-import {SortGridPipe} from "./sort-grid.pipe";
+import {SortGridPipe} from './sort-grid.pipe';
 
 describe('SortGridPipe', () => {
-    let pipe : SortGridPipe;
+    let pipe: SortGridPipe;
 
-    let pipeSnub = {
+    const pipeSnub = {
         transform: jasmine.createSpy('transform').and.returnValue('')
     };
 
@@ -13,7 +13,7 @@ describe('SortGridPipe', () => {
             providers: [
                 { provide: SortGridPipe, useValue: pipeSnub }
             ]
-        }).compileComponents()
+        }).compileComponents();
     });
 
     beforeEach(() => {
@@ -26,8 +26,8 @@ describe('SortGridPipe', () => {
     });
 
     it('should return nothing', () => {
-        const test: string[] = pipe.transform([],'')
-        const expected: string = '';
+        const test: string[] = pipe.transform([], '');
+        const expected = '';
         expect(test).toBe(expected);
     });
 });

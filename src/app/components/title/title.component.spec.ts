@@ -1,8 +1,8 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {TitleComponent} from './title.component';
-import {RouterTestingModule} from "@angular/router/testing";
-import {MatTabsModule} from "@angular/material/tabs";
+import {RouterTestingModule} from '@angular/router/testing';
+import {MatTabsModule} from '@angular/material/tabs';
 
 describe('TitleComponent', () => {
   let component: TitleComponent;
@@ -30,8 +30,8 @@ describe('TitleComponent', () => {
   });
 
   it('should capitalize the title', () => {
-    const test: string = "title";
-    const expected: string = "Title"
-    expect(component.capitalise(test)).toEqual(expected)
+    const test = 'title';
+    const expected = 'Title';
+    expect(component.capitalise(test)).toEqual(expected);
   });
 });

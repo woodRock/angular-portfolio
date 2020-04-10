@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {FeatureService} from '../../services/feature.service'
-import {Feature} from '../../models/feature.model'
-import {Subscription} from "rxjs";
+import {FeatureService} from '../../services/feature.service';
+import {Feature} from '../../models/feature.model';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.subscription = this.service.list().subscribe(feature => {
       this._features = feature;
-    })
+    });
   }
 
   ngOnDestroy() {

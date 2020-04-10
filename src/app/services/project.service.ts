@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
-import {AngularFirestore} from '@angular/fire/firestore'
-import {Project} from '../models/project.model'
-import {CrudService} from './crud.service'
+import {AngularFirestore} from '@angular/fire/firestore';
+import {Project} from '../models/project.model';
+import {CrudService} from './crud.service';
 
 @Injectable({
   providedIn: 'root'

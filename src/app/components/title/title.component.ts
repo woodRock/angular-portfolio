@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Route} from "@angular/router";
-import {routes} from "../../app-routing.module";
+import {Route} from '@angular/router';
+import {routes} from '../../app-routing.module';
 
 @Component({
   selector: 'app-title',
@@ -8,8 +8,8 @@ import {routes} from "../../app-routing.module";
   styleUrls: ['./title.component.css']
 })
 export class TitleComponent implements OnInit {
-  private typewriter_text: string = "wR";
-  private typewriter_display: string = this.typewriter_text + "|";
+  private typewriter_text = 'wR';
+  private typewriter_display: string = this.typewriter_text + '|';
 
   constructor() { }
 
@@ -18,14 +18,14 @@ export class TitleComponent implements OnInit {
   }
 
   typingCallback(that) {
-    let delay: number = 500;
-    let total_length = that.typewriter_text.length;
-    let current_length = that.typewriter_display.length;
-    let cursor = "|";
+    const delay = 500;
+    const total_length = that.typewriter_text.length;
+    const current_length = that.typewriter_display.length;
+    const cursor = '|';
     if (current_length < total_length) {
       that.typewriter_display += that.typewriter_text[current_length];
     } else {
-      if (that.typewriter_display.slice(-1) == cursor){
+      if (that.typewriter_display.slice(-1) === cursor) {
         that.typewriter_display = that.typewriter_display.slice(0, -1);
       } else {
         that.typewriter_display += cursor;
@@ -39,7 +39,7 @@ export class TitleComponent implements OnInit {
   }
 
   get tabs(): Route[] {
-    return routes.filter( i => i.path != '');
+    return routes.filter( i => i.path !== '');
   }
 
   get title(): string {
