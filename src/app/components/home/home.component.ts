@@ -27,7 +27,4 @@ export class HomeComponent implements OnInit, OnDestroy {
   get features(): Feature[] {
     return this._features;
   }
-
-  //test
-
 }
