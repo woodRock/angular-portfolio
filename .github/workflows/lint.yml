@@ -12,4 +12,4 @@ jobs:
       - name: Install 🔧
         run: npm ci
       - name: Run Linters 🔥
-        run: ng lint
+        run: npm lint
