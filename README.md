@@ -1,6 +1,6 @@
 # ng-portfolio-website
 ![Build](https://github.com/woodRock/woodRock.github.io/workflows/Build/badge.svg)
-
+![Lint](https://github.com/woodRock/woodRock.github.io/workflows/Lint/badge.svg)
 
 ## Description
 This is a portfolio of my work. Made using AngularTS and Firebase.
