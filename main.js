@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Latest compiled and minified CSS -->\n<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n<!-- jQuery library -->\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>\n<!-- Latest compiled JavaScript -->\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n<!-- Icon library -->\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n<link rel=\"stylesheet\"\n  href=\"https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en\">\n<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\">\n<link rel=\"stylesheet\" href=\"https://code.getmdl.io/1.3.0/material.min.css\">\n<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n\n<app-title></app-title>\n<div [@routeAnimations]=\"o && o.activatedRouteData \n      && o.activatedRouteData['animation']\">\n  <router-outlet #o=\"outlet\"></router-outlet>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Latest compiled and minified CSS -->\n<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n<!-- jQuery library -->\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>\n<!-- Latest compiled JavaScript -->\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n<!-- Icon library -->\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n<link rel=\"stylesheet\"\n  href=\"https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en\">\n<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\">\n<link rel=\"stylesheet\" href=\"https://code.getmdl.io/1.3.0/material.min.css\">\n\n<app-title></app-title>\n<div [@routeAnimations]=\"o && o.activatedRouteData \n      && o.activatedRouteData['animation']\">\n  <router-outlet #o=\"outlet\"></router-outlet>\n</div>");
 
 /***/ }),
 
@@ -35,7 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <iframe id=\"iframe\" frameborder=\"0\" scrolling=\"no\"  [attr.src]=\"getURL()\"></iframe>\n</div>\n\n<div *ngIf=\"loading\" class=\"content\" style=\"display: flex; justify-content: center; align-items: center\">\n  <mat-progress-spinner color=\"primary\" mode=\"indeterminate\">\n  </mat-progress-spinner>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <iframe id=\"iframe\" [attr.src]=\"getURL()\"></iframe>\n</div>\n\n<div *ngIf=\"loading\" class=\"content\" style=\"display: flex; justify-content: center; align-items: center\">\n  <mat-progress-spinner color=\"primary\" mode=\"indeterminate\">\n  </mat-progress-spinner>\n</div>\n");
 
 /***/ }),
 
