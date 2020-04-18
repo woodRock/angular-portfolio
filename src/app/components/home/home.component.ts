@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {FeatureService} from '../../services/feature.service';
 import {Feature} from '../../models/feature.model';
 import {Subscription} from 'rxjs';
+import {CrudService} from "../../services/crud.service";
 
 @Component({
   selector: 'app-home',
@@ -9,12 +9,14 @@ import {Subscription} from 'rxjs';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  private static COLLECTION: string = 'features'
   private _features: Feature[];
   private subscription: Subscription;
 
-  constructor(private service: FeatureService) { }
+  constructor(private service: CrudService<Feature>) {}
 
   ngOnInit() {
+    this.service.setName(HomeComponent.COLLECTION);
     this.subscription = this.service.list().subscribe(feature => {
       this._features = feature;
     });

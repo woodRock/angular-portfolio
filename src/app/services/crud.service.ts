@@ -2,16 +2,22 @@ import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firest
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {Entity} from '../models/entity.model';
+import {Inject, Injectable} from "@angular/core";
 
 function serialize<T>(object: T) {
   return JSON.parse(JSON.stringify(object));
 }
 
+@Injectable({
+  providedIn: 'root'
+})
 export class CrudService<T extends Entity> {
-  protected collection: AngularFirestoreCollection<T>;
+  private collection: AngularFirestoreCollection<T>;
 
-  constructor(protected afs: AngularFirestore, collectionName: string) {
-    this.collection = this.afs.collection(collectionName);
+  constructor(private afs: AngularFirestore) {}
+
+  public setName(name: string){
+    this.collection = this.afs.collection(name);
   }
 
   add(entity: T, id?: string): Promise<T> {

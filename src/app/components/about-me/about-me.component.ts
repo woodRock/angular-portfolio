@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {SocialService} from '../../services/social.service';
 import {Social} from '../../models/social.model';
 import {Subscription} from 'rxjs';
+import {CrudService} from "../../services/crud.service";
 
 @Component({
   selector: 'app-about-me',
@@ -9,12 +9,14 @@ import {Subscription} from 'rxjs';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent implements OnInit, OnDestroy {
+  private static COLLECTION: string = 'social';
   private _social: Social[];
   private subscription: Subscription;
 
-  constructor(private service: SocialService) { }
+  constructor(private service: CrudService<Social>) {}
 
   ngOnInit() {
+    this.service.setName(AboutMeComponent.COLLECTION);
     this.subscription = this.service.list().subscribe(social => {
       this._social = social;
     });

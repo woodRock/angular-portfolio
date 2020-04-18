@@ -1,20 +1,22 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ProjectService} from '../../services/project.service';
+import {Component, Injectable, OnDestroy, OnInit} from '@angular/core';
 import {Project} from '../../models/project.model';
 import {Subscription} from 'rxjs';
+import {CrudService} from "../../services/crud.service";
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: ['./projects.component.css'],
 })
 export class ProjectsComponent implements OnInit, OnDestroy {
+  private static COLLECTION: string = 'projects';
   private _projects: Project[];
   private subscription: Subscription;
 
-  constructor(private service: ProjectService) { }
+  constructor(private service: CrudService<Project>) {}
 
   ngOnInit() {
+    this.service.setName(ProjectsComponent.COLLECTION);
     this.subscription = this.service.list().subscribe(projects => {
       this._projects = projects;
     });
