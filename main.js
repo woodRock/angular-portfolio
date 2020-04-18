@@ -334,7 +334,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutMeComponent", function() { return AboutMeComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_social_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/social.service */ "./src/app/services/social.service.ts");
+/* harmony import */ var _services_crud_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/crud.service */ "./src/app/services/crud.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -353,8 +353,10 @@ var AboutMeComponent = /** @class */ (function () {
     function AboutMeComponent(service) {
         this.service = service;
     }
+    AboutMeComponent_1 = AboutMeComponent;
     AboutMeComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.service.setName(AboutMeComponent_1.COLLECTION);
         this.subscription = this.service.list().subscribe(function (social) {
             _this._social = social;
         });
@@ -369,16 +371,18 @@ var AboutMeComponent = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    var AboutMeComponent_1;
+    AboutMeComponent.COLLECTION = 'social';
     AboutMeComponent.ctorParameters = function () { return [
-        { type: _services_social_service__WEBPACK_IMPORTED_MODULE_1__["SocialService"] }
+        { type: _services_crud_service__WEBPACK_IMPORTED_MODULE_1__["CrudService"] }
     ]; };
-    AboutMeComponent = __decorate([
+    AboutMeComponent = AboutMeComponent_1 = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-about-me',
             template: __importDefault(__webpack_require__(/*! raw-loader!./about-me.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/about-me/about-me.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./about-me.component.css */ "./src/app/components/about-me/about-me.component.css")).default]
         }),
-        __metadata("design:paramtypes", [_services_social_service__WEBPACK_IMPORTED_MODULE_1__["SocialService"]])
+        __metadata("design:paramtypes", [_services_crud_service__WEBPACK_IMPORTED_MODULE_1__["CrudService"]])
     ], AboutMeComponent);
     return AboutMeComponent;
 }());
@@ -492,7 +496,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_feature_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/feature.service */ "./src/app/services/feature.service.ts");
+/* harmony import */ var _services_crud_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/crud.service */ "./src/app/services/crud.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -511,8 +515,10 @@ var HomeComponent = /** @class */ (function () {
     function HomeComponent(service) {
         this.service = service;
     }
+    HomeComponent_1 = HomeComponent;
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.service.setName(HomeComponent_1.COLLECTION);
         this.subscription = this.service.list().subscribe(function (feature) {
             _this._features = feature;
         });
@@ -527,16 +533,18 @@ var HomeComponent = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    var HomeComponent_1;
+    HomeComponent.COLLECTION = 'features';
     HomeComponent.ctorParameters = function () { return [
-        { type: _services_feature_service__WEBPACK_IMPORTED_MODULE_1__["FeatureService"] }
+        { type: _services_crud_service__WEBPACK_IMPORTED_MODULE_1__["CrudService"] }
     ]; };
-    HomeComponent = __decorate([
+    HomeComponent = HomeComponent_1 = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-home',
             template: __importDefault(__webpack_require__(/*! raw-loader!./home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/home/home.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./home.component.css */ "./src/app/components/home/home.component.css")).default]
         }),
-        __metadata("design:paramtypes", [_services_feature_service__WEBPACK_IMPORTED_MODULE_1__["FeatureService"]])
+        __metadata("design:paramtypes", [_services_crud_service__WEBPACK_IMPORTED_MODULE_1__["CrudService"]])
     ], HomeComponent);
     return HomeComponent;
 }());
@@ -569,7 +577,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectsComponent", function() { return ProjectsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _services_project_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/project.service */ "./src/app/services/project.service.ts");
+/* harmony import */ var _services_crud_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/crud.service */ "./src/app/services/crud.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -588,8 +596,10 @@ var ProjectsComponent = /** @class */ (function () {
     function ProjectsComponent(service) {
         this.service = service;
     }
+    ProjectsComponent_1 = ProjectsComponent;
     ProjectsComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.service.setName(ProjectsComponent_1.COLLECTION);
         this.subscription = this.service.list().subscribe(function (projects) {
             _this._projects = projects;
         });
@@ -607,16 +617,18 @@ var ProjectsComponent = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    var ProjectsComponent_1;
+    ProjectsComponent.COLLECTION = 'projects';
     ProjectsComponent.ctorParameters = function () { return [
-        { type: _services_project_service__WEBPACK_IMPORTED_MODULE_1__["ProjectService"] }
+        { type: _services_crud_service__WEBPACK_IMPORTED_MODULE_1__["CrudService"] }
     ]; };
-    ProjectsComponent = __decorate([
+    ProjectsComponent = ProjectsComponent_1 = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-projects',
             template: __importDefault(__webpack_require__(/*! raw-loader!./projects.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/projects/projects.component.html")).default,
             styles: [__importDefault(__webpack_require__(/*! ./projects.component.css */ "./src/app/components/projects/projects.component.css")).default]
         }),
-        __metadata("design:paramtypes", [_services_project_service__WEBPACK_IMPORTED_MODULE_1__["ProjectService"]])
+        __metadata("design:paramtypes", [_services_crud_service__WEBPACK_IMPORTED_MODULE_1__["CrudService"]])
     ], ProjectsComponent);
     return ProjectsComponent;
 }());
@@ -792,7 +804,9 @@ var slideInAnimation = Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CrudService", function() { return CrudService; });
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __assign = (undefined && undefined.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -804,18 +818,31 @@ var __assign = (undefined && undefined.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
+
 
 function serialize(object) {
     return JSON.parse(JSON.stringify(object));
 }
 var CrudService = /** @class */ (function () {
-    function CrudService(afs, collectionName) {
+    function CrudService(afs) {
         this.afs = afs;
-        this.collection = this.afs.collection(collectionName);
     }
+    CrudService.prototype.setName = function (name) {
+        this.collection = this.afs.collection(name);
+    };
     CrudService.prototype.add = function (entity, id) {
         var _this = this;
         return new Promise(function (resolve, reject) {
@@ -839,7 +866,7 @@ var CrudService = /** @class */ (function () {
         return this.collection
             .doc(id)
             .snapshotChanges()
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_0__["map"])(function (doc) {
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (doc) {
             if (doc.payload.exists) {
                 var data = doc.payload.data();
                 var payloadId = doc.payload.id;
@@ -848,7 +875,7 @@ var CrudService = /** @class */ (function () {
         }));
     };
     CrudService.prototype.list = function () {
-        return this.collection.snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_0__["map"])(function (changes) {
+        return this.collection.snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(function (changes) {
             return changes.map(function (a) {
                 var data = a.payload.doc.data();
                 data.id = a.payload.doc.id;
@@ -878,200 +905,17 @@ var CrudService = /** @class */ (function () {
             });
         });
     };
+    CrudService.ctorParameters = function () { return [
+        { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_0__["AngularFirestore"] }
+    ]; };
+    CrudService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_0__["AngularFirestore"]])
+    ], CrudService);
     return CrudService;
 }());
-
-
-
-/***/ }),
-
-/***/ "./src/app/services/feature.service.ts":
-/*!*********************************************!*\
-  !*** ./src/app/services/feature.service.ts ***!
-  \*********************************************/
-/*! exports provided: FeatureService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeatureService", function() { return FeatureService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
-/* harmony import */ var _crud_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./crud.service */ "./src/app/services/crud.service.ts");
-var __extends = (undefined && undefined.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
-  return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-
-
-
-var FeatureService = /** @class */ (function (_super) {
-    __extends(FeatureService, _super);
-    function FeatureService(_afs) {
-        var _this = _super.call(this, _afs, 'features') || this;
-        _this._afs = _afs;
-        return _this;
-    }
-    FeatureService.ctorParameters = function () { return [
-        { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_1__["AngularFirestore"] }
-    ]; };
-    FeatureService = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
-            providedIn: 'root'
-        }),
-        __metadata("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_1__["AngularFirestore"]])
-    ], FeatureService);
-    return FeatureService;
-}(_crud_service__WEBPACK_IMPORTED_MODULE_2__["CrudService"]));
-
-
-
-/***/ }),
-
-/***/ "./src/app/services/project.service.ts":
-/*!*********************************************!*\
-  !*** ./src/app/services/project.service.ts ***!
-  \*********************************************/
-/*! exports provided: ProjectService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectService", function() { return ProjectService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
-/* harmony import */ var _crud_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./crud.service */ "./src/app/services/crud.service.ts");
-var __extends = (undefined && undefined.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
-  return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-
-
-
-var ProjectService = /** @class */ (function (_super) {
-    __extends(ProjectService, _super);
-    function ProjectService(_afs) {
-        var _this = _super.call(this, _afs, 'projects') || this;
-        _this._afs = _afs;
-        return _this;
-    }
-    ProjectService.ctorParameters = function () { return [
-        { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_1__["AngularFirestore"] }
-    ]; };
-    ProjectService = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
-            providedIn: 'root'
-        }),
-        __metadata("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_1__["AngularFirestore"]])
-    ], ProjectService);
-    return ProjectService;
-}(_crud_service__WEBPACK_IMPORTED_MODULE_2__["CrudService"]));
-
-
-
-/***/ }),
-
-/***/ "./src/app/services/social.service.ts":
-/*!********************************************!*\
-  !*** ./src/app/services/social.service.ts ***!
-  \********************************************/
-/*! exports provided: SocialService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SocialService", function() { return SocialService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
-/* harmony import */ var _crud_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./crud.service */ "./src/app/services/crud.service.ts");
-var __extends = (undefined && undefined.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
-  return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-
-
-
-var SocialService = /** @class */ (function (_super) {
-    __extends(SocialService, _super);
-    function SocialService(_afs) {
-        var _this = _super.call(this, _afs, 'social') || this;
-        _this._afs = _afs;
-        return _this;
-    }
-    SocialService.ctorParameters = function () { return [
-        { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_1__["AngularFirestore"] }
-    ]; };
-    SocialService = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
-            providedIn: 'root'
-        }),
-        __metadata("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_1__["AngularFirestore"]])
-    ], SocialService);
-    return SocialService;
-}(_crud_service__WEBPACK_IMPORTED_MODULE_2__["CrudService"]));
 
 
 
