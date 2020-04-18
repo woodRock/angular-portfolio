@@ -1,5 +1,5 @@
 <div>
-  <iframe id="iframe" frameborder="0" scrolling="no"  [attr.src]="getURL()"></iframe>
+  <iframe id="iframe" [attr.src]="getURL()"></iframe>
 </div>
 
 <div *ngIf="loading" class="content" style="display: flex; justify-content: center; align-items: center">
