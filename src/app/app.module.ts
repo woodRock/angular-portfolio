@@ -19,6 +19,7 @@ import {SortGridPipe} from './util/sort-grid.pipe';
 import {TimeAgoPipe} from 'time-ago-pipe';
 import {CoronaComponent} from './components/corona/corona.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {LanguagesComponent} from './components/languages/languages.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     TitleComponent,
     SortGridPipe,
     TimeAgoPipe,
-    CoronaComponent
+    CoronaComponent,
+    LanguagesComponent
   ],
   imports: [
     BrowserModule,

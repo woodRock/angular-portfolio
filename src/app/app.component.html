@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
 
 <app-title></app-title>
-<div [@routeAnimations]="o && o.activatedRouteData 
+<div class="content" [@routeAnimations]="o && o.activatedRouteData
       && o.activatedRouteData['animation']">
   <router-outlet #o="outlet"></router-outlet>
 </div>
