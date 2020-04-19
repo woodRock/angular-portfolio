@@ -1,7 +1,7 @@
 import {Component, Injectable, OnDestroy, OnInit} from '@angular/core';
 import {Project} from '../../models/project.model';
 import {Subscription} from 'rxjs';
-import {CrudService} from "../../services/crud.service";
+import {CrudService} from '../../services/crud.service';
 
 @Component({
   selector: 'app-projects',
@@ -9,7 +9,7 @@ import {CrudService} from "../../services/crud.service";
   styleUrls: ['./projects.component.css'],
 })
 export class ProjectsComponent implements OnInit, OnDestroy {
-  private static COLLECTION: string = 'projects';
+  private static COLLECTION = 'projects';
   private _projects: Project[];
   private subscription: Subscription;
 
