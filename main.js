@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Latest compiled and minified CSS -->\n<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n<!-- jQuery library -->\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>\n<!-- Latest compiled JavaScript -->\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n<!-- Icon library -->\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n<link rel=\"stylesheet\"\n  href=\"https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en\">\n<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\">\n<link rel=\"stylesheet\" href=\"https://code.getmdl.io/1.3.0/material.min.css\">\n\n<app-title></app-title>\n<div [@routeAnimations]=\"o && o.activatedRouteData \n      && o.activatedRouteData['animation']\">\n  <router-outlet #o=\"outlet\"></router-outlet>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Latest compiled and minified CSS -->\n<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n<!-- jQuery library -->\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>\n<!-- Latest compiled JavaScript -->\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n<!-- Icon library -->\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n<link rel=\"stylesheet\"\n  href=\"https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en\">\n<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\">\n<link rel=\"stylesheet\" href=\"https://code.getmdl.io/1.3.0/material.min.css\">\n\n<app-title></app-title>\n<div class=\"content\" [@routeAnimations]=\"o && o.activatedRouteData\n      && o.activatedRouteData['animation']\">\n  <router-outlet #o=\"outlet\"></router-outlet>\n</div>\n");
 
 /***/ }),
 
@@ -49,6 +49,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"content mdl-layout__content\">\n  <div *ngFor=\"let feature of features\"  class=\"feature active mdl-typography--text-center\" [style.background]=\"'url(' + feature.gif + ')'\" [style.background-repeat]=\"'no-repeat'\" [style.background-size]=\"'cover'\" style=\"background-repeat: no-repeat\" [style.background-position]=\"'center'\">\n    <div class=\"feature-font slogan\">{{feature.title}}</div>\n    <div class=\"feature-font sub-slogan\">{{feature.description}}</div>\n    <div class=\"feature-font github-link\">\n      <a routerLink=\"{{feature.link}}\">\n        <img src=\"{{feature.linkImage}}\" height=20px width=20px>\n        <b>See Also</b>\n        {{feature.link}}\n      </a>\n    </div>\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/languages/languages.component.html":
+/*!*****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/languages/languages.component.html ***!
+  \*****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"column\" *ngFor=\"let language of languages\">\n        <img src=\"{{language.url}}\" width=\"100\" height=\"100\" alt=\"{{language.name}}\">\n    </div>\n</div>\n\n");
 
 /***/ }),
 
@@ -117,6 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_about_me_about_me_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/about-me/about-me.component */ "./src/app/components/about-me/about-me.component.ts");
 /* harmony import */ var _components_projects_projects_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/projects/projects.component */ "./src/app/components/projects/projects.component.ts");
 /* harmony import */ var _components_corona_corona_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/corona/corona.component */ "./src/app/components/corona/corona.component.ts");
+/* harmony import */ var _components_languages_languages_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/languages/languages.component */ "./src/app/components/languages/languages.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -131,11 +145,13 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 
+
 var routes = [
     { path: '', pathMatch: 'full', redirectTo: '/projects' },
     { path: 'projects', component: _components_projects_projects_component__WEBPACK_IMPORTED_MODULE_3__["ProjectsComponent"], data: { animation: 'Home' } },
     { path: 'about', component: _components_about_me_about_me_component__WEBPACK_IMPORTED_MODULE_2__["AboutMeComponent"], data: { animation: 'About' } },
-    { path: 'corona', component: _components_corona_corona_component__WEBPACK_IMPORTED_MODULE_4__["CoronaComponent"], data: { animation: 'About' } }
+    { path: 'languages', component: _components_languages_languages_component__WEBPACK_IMPORTED_MODULE_5__["LanguagesComponent"], data: { animation: 'About' } },
+    { path: 'corona', component: _components_corona_corona_component__WEBPACK_IMPORTED_MODULE_4__["CoronaComponent"], data: { animation: 'About' } },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -162,7 +178,7 @@ var AppRoutingModule = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("body,\nhtml {\n  background: var(--third-color);\n  -ms-overflow-style: -ms-autohiding-scrollbar;\n}\n\nbody {\n  background-color: var(--fourth-color);\n}\n\n::-webkit-scrollbar {\n  display: none;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0VBRUUsOEJBQThCO0VBQzlCLDRDQUE0QztBQUM5Qzs7QUFFQTtFQUNFLHFDQUFxQztBQUN2Qzs7QUFFQTtFQUNFLGFBQWE7QUFDZiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSxcbmh0bWwge1xuICBiYWNrZ3JvdW5kOiB2YXIoLS10aGlyZC1jb2xvcik7XG4gIC1tcy1vdmVyZmxvdy1zdHlsZTogLW1zLWF1dG9oaWRpbmctc2Nyb2xsYmFyO1xufVxuXG5ib2R5IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tZm91cnRoLWNvbG9yKTtcbn1cblxuOjotd2Via2l0LXNjcm9sbGJhciB7XG4gIGRpc3BsYXk6IG5vbmU7XG59XG4iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("body,\nhtml {\n  background: var(--third-color);\n  -ms-overflow-style: -ms-autohiding-scrollbar;\n}\n\nbody {\n  background-color: var(--fourth-color);\n}\n\n::-webkit-scrollbar {\n  display: none;\n}\n\n.content {\n  top: 49px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0VBRUUsOEJBQThCO0VBQzlCLDRDQUE0QztBQUM5Qzs7QUFFQTtFQUNFLHFDQUFxQztBQUN2Qzs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLFNBQVM7QUFDWCIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSxcbmh0bWwge1xuICBiYWNrZ3JvdW5kOiB2YXIoLS10aGlyZC1jb2xvcik7XG4gIC1tcy1vdmVyZmxvdy1zdHlsZTogLW1zLWF1dG9oaWRpbmctc2Nyb2xsYmFyO1xufVxuXG5ib2R5IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tZm91cnRoLWNvbG9yKTtcbn1cblxuOjotd2Via2l0LXNjcm9sbGJhciB7XG4gIGRpc3BsYXk6IG5vbmU7XG59XG5cbi5jb250ZW50IHtcbiAgdG9wOiA0OXB4O1xufVxuIl19 */");
 
 /***/ }),
 
@@ -240,6 +256,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var time_ago_pipe__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! time-ago-pipe */ "./node_modules/time-ago-pipe/esm5/time-ago-pipe.js");
 /* harmony import */ var _components_corona_corona_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/corona/corona.component */ "./src/app/components/corona/corona.component.ts");
 /* harmony import */ var _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/material/progress-spinner */ "./node_modules/@angular/material/esm5/progress-spinner.es5.js");
+/* harmony import */ var _components_languages_languages_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/languages/languages.component */ "./src/app/components/languages/languages.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -249,6 +266,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -283,7 +301,8 @@ var AppModule = /** @class */ (function () {
                 _components_title_title_component__WEBPACK_IMPORTED_MODULE_8__["TitleComponent"],
                 _util_sort_grid_pipe__WEBPACK_IMPORTED_MODULE_17__["SortGridPipe"],
                 time_ago_pipe__WEBPACK_IMPORTED_MODULE_18__["TimeAgoPipe"],
-                _components_corona_corona_component__WEBPACK_IMPORTED_MODULE_19__["CoronaComponent"]
+                _components_corona_corona_component__WEBPACK_IMPORTED_MODULE_19__["CoronaComponent"],
+                _components_languages_languages_component__WEBPACK_IMPORTED_MODULE_21__["LanguagesComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -319,7 +338,7 @@ var AppModule = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/* On mouse-over, add a deeper shadow */\n\n.card:hover {\n  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);\n}\n\n/* Add some padding inside the card container */\n\n.container {\n  padding: 2px 16px;\n}\n\n.card {\n  margin: auto;\n  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);\n  transition: 0.3s;\n  border-radius: 5px;\n  /* 5px rounded corners */\n  width: 40%;\n  background: var(--third-color);\n  margin-bottom: 20px;\n  height: 400px;\n  width: 250px;\n}\n\n/* Add rounded corners to the top left and the top right corner of the image */\n\nimg {\n  max-width: 100%;\n  max-height: 300px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.content {\n  margin: auto;\n  background: var(--background-color);\n  display: block;\n  position: relative;\n}\n\n.projects {\n  width: 100%;\n  margin: auto;\n}\n\n.button a {\n  text-decoration: none;\n  background-color: var(--fourth-color);\n  color: var(--third-color);\n}\n\n.button a:hover {\n  background-color: var(--secondary-color);\n}\n\n.square {\n  background-color: var(-main-color);\n  align-content: center;\n  -o-object-fit: cover;\n     object-fit: cover;\n  width:100%;\n  height:220px;\n}\n\n.not-pink-please {\n  background: var(--third-color);\n  background-color: var(--third-color);\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9hYm91dC1tZS9hYm91dC1tZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLHVDQUF1Qzs7QUFFdkM7RUFDRSwyQ0FBMkM7QUFDN0M7O0FBRUEsK0NBQStDOztBQUUvQztFQUNFLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLFlBQVk7RUFDWiw0Q0FBNEM7RUFDNUMsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQix3QkFBd0I7RUFDeEIsVUFBVTtFQUNWLDhCQUE4QjtFQUM5QixtQkFBbUI7RUFDbkIsYUFBYTtFQUNiLFlBQVk7QUFDZDs7QUFFQSw4RUFBOEU7O0FBRTlFO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixpQkFBaUI7RUFDakIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsWUFBWTtFQUNaLG1DQUFtQztFQUNuQyxjQUFjO0VBQ2Qsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsV0FBVztFQUNYLFlBQVk7QUFDZDs7QUFFQTtFQUNFLHFCQUFxQjtFQUNyQixxQ0FBcUM7RUFDckMseUJBQXlCO0FBQzNCOztBQUVBO0VBQ0Usd0NBQXdDO0FBQzFDOztBQUVBO0VBQ0Usa0NBQWtDO0VBQ2xDLHFCQUFxQjtFQUNyQixvQkFBaUI7S0FBakIsaUJBQWlCO0VBQ2pCLFVBQVU7RUFDVixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSw4QkFBOEI7RUFDOUIsb0NBQW9DO0FBQ3RDIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9hYm91dC1tZS9hYm91dC1tZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogT24gbW91c2Utb3ZlciwgYWRkIGEgZGVlcGVyIHNoYWRvdyAqL1xuXG4uY2FyZDpob3ZlciB7XG4gIGJveC1zaGFkb3c6IDAgOHB4IDE2cHggMCByZ2JhKDAsIDAsIDAsIDAuMik7XG59XG5cbi8qIEFkZCBzb21lIHBhZGRpbmcgaW5zaWRlIHRoZSBjYXJkIGNvbnRhaW5lciAqL1xuXG4uY29udGFpbmVyIHtcbiAgcGFkZGluZzogMnB4IDE2cHg7XG59XG5cbi5jYXJkIHtcbiAgbWFyZ2luOiBhdXRvO1xuICBib3gtc2hhZG93OiAwIDEwcHggMjBweCAwIHJnYmEoMCwgMCwgMCwgMC4yKTtcbiAgdHJhbnNpdGlvbjogMC4zcztcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAvKiA1cHggcm91bmRlZCBjb3JuZXJzICovXG4gIHdpZHRoOiA0MCU7XG4gIGJhY2tncm91bmQ6IHZhcigtLXRoaXJkLWNvbG9yKTtcbiAgbWFyZ2luLWJvdHRvbTogMjBweDtcbiAgaGVpZ2h0OiA0MDBweDtcbiAgd2lkdGg6IDI1MHB4O1xufVxuXG4vKiBBZGQgcm91bmRlZCBjb3JuZXJzIHRvIHRoZSB0b3AgbGVmdCBhbmQgdGhlIHRvcCByaWdodCBjb3JuZXIgb2YgdGhlIGltYWdlICovXG5cbmltZyB7XG4gIG1heC13aWR0aDogMTAwJTtcbiAgbWF4LWhlaWdodDogMzAwcHg7XG4gIG1hcmdpbi1sZWZ0OiBhdXRvO1xuICBtYXJnaW4tcmlnaHQ6IGF1dG87XG59XG5cbi5jb250ZW50IHtcbiAgbWFyZ2luOiBhdXRvO1xuICBiYWNrZ3JvdW5kOiB2YXIoLS1iYWNrZ3JvdW5kLWNvbG9yKTtcbiAgZGlzcGxheTogYmxvY2s7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuLnByb2plY3RzIHtcbiAgd2lkdGg6IDEwMCU7XG4gIG1hcmdpbjogYXV0bztcbn1cblxuLmJ1dHRvbiBhIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1mb3VydGgtY29sb3IpO1xuICBjb2xvcjogdmFyKC0tdGhpcmQtY29sb3IpO1xufVxuXG4uYnV0dG9uIGE6aG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnktY29sb3IpO1xufVxuXG4uc3F1YXJlIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC1tYWluLWNvbG9yKTtcbiAgYWxpZ24tY29udGVudDogY2VudGVyO1xuICBvYmplY3QtZml0OiBjb3ZlcjtcbiAgd2lkdGg6MTAwJTtcbiAgaGVpZ2h0OjIyMHB4O1xufVxuXG4ubm90LXBpbmstcGxlYXNlIHtcbiAgYmFja2dyb3VuZDogdmFyKC0tdGhpcmQtY29sb3IpO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS10aGlyZC1jb2xvcik7XG59XG4iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("/* On mouse-over, add a deeper shadow */\n\n.card:hover {\n  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);\n}\n\n/* Add some padding inside the card container */\n\n.container {\n  padding: 2px 16px;\n}\n\n.card {\n  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);\n  transition: 0.3s;\n  border-radius: 5px;\n  /* 5px rounded corners */\n  width: 40%;\n  background: var(--third-color);\n  margin: auto auto 20px;\n  height: 400px;\n  width: 250px;\n}\n\n/* Add rounded corners to the top left and the top right corner of the image */\n\nimg {\n  max-width: 100%;\n  max-height: 300px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.content {\n  margin: auto;\n  background: var(--background-color);\n  display: block;\n  position: relative;\n}\n\n.projects {\n  width: 100%;\n  margin: auto;\n}\n\n.button a {\n  text-decoration: none;\n  background-color: var(--fourth-color);\n  color: var(--third-color);\n}\n\n.button a:hover {\n  background-color: var(--secondary-color);\n}\n\n.square {\n  background-color: white;\n  align-content: center;\n  -o-object-fit: cover;\n     object-fit: cover;\n  width:100%;\n  height:220px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9hYm91dC1tZS9hYm91dC1tZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLHVDQUF1Qzs7QUFFdkM7RUFDRSwyQ0FBMkM7QUFDN0M7O0FBRUEsK0NBQStDOztBQUUvQztFQUNFLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLDRDQUE0QztFQUM1QyxnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLHdCQUF3QjtFQUN4QixVQUFVO0VBQ1YsOEJBQThCO0VBQzlCLHNCQUFzQjtFQUN0QixhQUFhO0VBQ2IsWUFBWTtBQUNkOztBQUVBLDhFQUE4RTs7QUFFOUU7RUFDRSxlQUFlO0VBQ2YsaUJBQWlCO0VBQ2pCLGlCQUFpQjtFQUNqQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxZQUFZO0VBQ1osbUNBQW1DO0VBQ25DLGNBQWM7RUFDZCxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsWUFBWTtBQUNkOztBQUVBO0VBQ0UscUJBQXFCO0VBQ3JCLHFDQUFxQztFQUNyQyx5QkFBeUI7QUFDM0I7O0FBRUE7RUFDRSx3Q0FBd0M7QUFDMUM7O0FBRUE7RUFDRSx1QkFBdUI7RUFDdkIscUJBQXFCO0VBQ3JCLG9CQUFpQjtLQUFqQixpQkFBaUI7RUFDakIsVUFBVTtFQUNWLFlBQVk7QUFDZCIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYWJvdXQtbWUvYWJvdXQtbWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIE9uIG1vdXNlLW92ZXIsIGFkZCBhIGRlZXBlciBzaGFkb3cgKi9cblxuLmNhcmQ6aG92ZXIge1xuICBib3gtc2hhZG93OiAwIDhweCAxNnB4IDAgcmdiYSgwLCAwLCAwLCAwLjIpO1xufVxuXG4vKiBBZGQgc29tZSBwYWRkaW5nIGluc2lkZSB0aGUgY2FyZCBjb250YWluZXIgKi9cblxuLmNvbnRhaW5lciB7XG4gIHBhZGRpbmc6IDJweCAxNnB4O1xufVxuXG4uY2FyZCB7XG4gIGJveC1zaGFkb3c6IDAgMTBweCAyMHB4IDAgcmdiYSgwLCAwLCAwLCAwLjIpO1xuICB0cmFuc2l0aW9uOiAwLjNzO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIC8qIDVweCByb3VuZGVkIGNvcm5lcnMgKi9cbiAgd2lkdGg6IDQwJTtcbiAgYmFja2dyb3VuZDogdmFyKC0tdGhpcmQtY29sb3IpO1xuICBtYXJnaW46IGF1dG8gYXV0byAyMHB4O1xuICBoZWlnaHQ6IDQwMHB4O1xuICB3aWR0aDogMjUwcHg7XG59XG5cbi8qIEFkZCByb3VuZGVkIGNvcm5lcnMgdG8gdGhlIHRvcCBsZWZ0IGFuZCB0aGUgdG9wIHJpZ2h0IGNvcm5lciBvZiB0aGUgaW1hZ2UgKi9cblxuaW1nIHtcbiAgbWF4LXdpZHRoOiAxMDAlO1xuICBtYXgtaGVpZ2h0OiAzMDBweDtcbiAgbWFyZ2luLWxlZnQ6IGF1dG87XG4gIG1hcmdpbi1yaWdodDogYXV0bztcbn1cblxuLmNvbnRlbnQge1xuICBtYXJnaW46IGF1dG87XG4gIGJhY2tncm91bmQ6IHZhcigtLWJhY2tncm91bmQtY29sb3IpO1xuICBkaXNwbGF5OiBibG9jaztcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuXG4ucHJvamVjdHMge1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luOiBhdXRvO1xufVxuXG4uYnV0dG9uIGEge1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWZvdXJ0aC1jb2xvcik7XG4gIGNvbG9yOiB2YXIoLS10aGlyZC1jb2xvcik7XG59XG5cbi5idXR0b24gYTpob3ZlciB7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLXNlY29uZGFyeS1jb2xvcik7XG59XG5cbi5zcXVhcmUge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgYWxpZ24tY29udGVudDogY2VudGVyO1xuICBvYmplY3QtZml0OiBjb3ZlcjtcbiAgd2lkdGg6MTAwJTtcbiAgaGVpZ2h0OjIyMHB4O1xufVxuIl19 */");
 
 /***/ }),
 
@@ -481,7 +500,7 @@ var CoronaComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/* Add rounded corners to the top left and the */\n.content{\n  background: var(--third-color);\n  background-color: var(--third-color);\n  display: block;\n  position: relative;\n}\n.feature {\n  position: relative;\n  height: 800px;\n  width: auto;\n  background-color: var(--third-color);\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.feature-font {\n  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;\n  line-height: 1;\n  color: var(--third-color);\n  font-weight: 500;\n  font: 50px;\n}\n.slogan {\n  font-size: 60px;\n  padding-top: 160px;\n}\n.sub-slogan {\n  font-size: 21px;\n  margin: 0 16px;\n  padding-top: 8px;\n}\n.github-link {\n  font-size: 21px;\n  padding-top: 400px;\n}\n.github-link a {\n  text-decoration: none;\n  color: var(--third-color);\n  font-weight: 300;\n}\n/* Gifs appear when mouse hovers over them */\n/* ref: https://codepen.io/QDeltaE/pen/VWGYOB */\n.static {\n  position:absolute;\n  background: white;\n}\n.static:hover {\n  opacity:0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ob21lL2hvbWUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnREFBZ0Q7QUFDaEQ7RUFDRSw4QkFBOEI7RUFDOUIsb0NBQW9DO0VBQ3BDLGNBQWM7RUFDZCxrQkFBa0I7QUFDcEI7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixhQUFhO0VBQ2IsV0FBVztFQUNYLG9DQUFvQztFQUNwQyxzQkFBc0I7RUFDdEIsNEJBQTRCO0FBQzlCO0FBRUE7RUFDRSx1REFBdUQ7RUFDdkQsY0FBYztFQUNkLHlCQUF5QjtFQUN6QixnQkFBZ0I7RUFDaEIsVUFBVTtBQUNaO0FBRUE7RUFDRSxlQUFlO0VBQ2Ysa0JBQWtCO0FBQ3BCO0FBRUE7RUFDRSxlQUFlO0VBQ2YsY0FBYztFQUNkLGdCQUFnQjtBQUNsQjtBQUVBO0VBQ0UsZUFBZTtFQUNmLGtCQUFrQjtBQUNwQjtBQUVBO0VBQ0UscUJBQXFCO0VBQ3JCLHlCQUF5QjtFQUN6QixnQkFBZ0I7QUFDbEI7QUFFQSw0Q0FBNEM7QUFDNUMsK0NBQStDO0FBQy9DO0VBQ0UsaUJBQWlCO0VBQ2pCLGlCQUFpQjtBQUNuQjtBQUVBO0VBQ0UsU0FBUztBQUNYIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9ob21lL2hvbWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIEFkZCByb3VuZGVkIGNvcm5lcnMgdG8gdGhlIHRvcCBsZWZ0IGFuZCB0aGUgKi9cbi5jb250ZW50e1xuICBiYWNrZ3JvdW5kOiB2YXIoLS10aGlyZC1jb2xvcik7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLXRoaXJkLWNvbG9yKTtcbiAgZGlzcGxheTogYmxvY2s7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuLmZlYXR1cmUge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGhlaWdodDogODAwcHg7XG4gIHdpZHRoOiBhdXRvO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS10aGlyZC1jb2xvcik7XG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG59XG5cbi5mZWF0dXJlLWZvbnQge1xuICBmb250LWZhbWlseTogJ1JvYm90bycsICdIZWx2ZXRpY2EnLCAnQXJpYWwnLCBzYW5zLXNlcmlmO1xuICBsaW5lLWhlaWdodDogMTtcbiAgY29sb3I6IHZhcigtLXRoaXJkLWNvbG9yKTtcbiAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgZm9udDogNTBweDtcbn1cblxuLnNsb2dhbiB7XG4gIGZvbnQtc2l6ZTogNjBweDtcbiAgcGFkZGluZy10b3A6IDE2MHB4O1xufVxuXG4uc3ViLXNsb2dhbiB7XG4gIGZvbnQtc2l6ZTogMjFweDtcbiAgbWFyZ2luOiAwIDE2cHg7XG4gIHBhZGRpbmctdG9wOiA4cHg7XG59XG5cbi5naXRodWItbGluayB7XG4gIGZvbnQtc2l6ZTogMjFweDtcbiAgcGFkZGluZy10b3A6IDQwMHB4O1xufVxuXG4uZ2l0aHViLWxpbmsgYSB7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgY29sb3I6IHZhcigtLXRoaXJkLWNvbG9yKTtcbiAgZm9udC13ZWlnaHQ6IDMwMDtcbn1cblxuLyogR2lmcyBhcHBlYXIgd2hlbiBtb3VzZSBob3ZlcnMgb3ZlciB0aGVtICovXG4vKiByZWY6IGh0dHBzOi8vY29kZXBlbi5pby9RRGVsdGFFL3Blbi9WV0dZT0IgKi9cbi5zdGF0aWMge1xuICBwb3NpdGlvbjphYnNvbHV0ZTtcbiAgYmFja2dyb3VuZDogd2hpdGU7XG59XG5cbi5zdGF0aWM6aG92ZXIge1xuICBvcGFjaXR5OjA7XG59Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = ("/* Add rounded corners to the top left and the */\n.content{\n  background: var(--third-color);\n  background-color: var(--third-color);\n  display: block;\n  position: relative;\n}\n.feature {\n  position: relative;\n  height: 800px;\n  width: auto;\n  background-color: var(--third-color);\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n.feature-font {\n  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;\n  line-height: 1;\n  color: var(--third-color);\n  font-weight: 500;\n  font-size: 50px;\n}\n.slogan {\n  font-size: 60px;\n  padding-top: 160px;\n}\n.sub-slogan {\n  font-size: 21px;\n  margin: 0 16px;\n  padding-top: 8px;\n}\n.github-link {\n  font-size: 21px;\n  padding-top: 400px;\n}\n.github-link a {\n  text-decoration: none;\n  color: var(--third-color);\n  font-weight: 300;\n}\n/* Gifs appear when mouse hovers over them */\n/* ref: https://codepen.io/QDeltaE/pen/VWGYOB */\n.static {\n  position:absolute;\n  background: white;\n}\n.static:hover {\n  opacity:0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ob21lL2hvbWUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnREFBZ0Q7QUFDaEQ7RUFDRSw4QkFBOEI7RUFDOUIsb0NBQW9DO0VBQ3BDLGNBQWM7RUFDZCxrQkFBa0I7QUFDcEI7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixhQUFhO0VBQ2IsV0FBVztFQUNYLG9DQUFvQztFQUNwQyxzQkFBc0I7RUFDdEIsNEJBQTRCO0FBQzlCO0FBRUE7RUFDRSx1REFBdUQ7RUFDdkQsY0FBYztFQUNkLHlCQUF5QjtFQUN6QixnQkFBZ0I7RUFDaEIsZUFBZTtBQUNqQjtBQUVBO0VBQ0UsZUFBZTtFQUNmLGtCQUFrQjtBQUNwQjtBQUVBO0VBQ0UsZUFBZTtFQUNmLGNBQWM7RUFDZCxnQkFBZ0I7QUFDbEI7QUFFQTtFQUNFLGVBQWU7RUFDZixrQkFBa0I7QUFDcEI7QUFFQTtFQUNFLHFCQUFxQjtFQUNyQix5QkFBeUI7RUFDekIsZ0JBQWdCO0FBQ2xCO0FBRUEsNENBQTRDO0FBQzVDLCtDQUErQztBQUMvQztFQUNFLGlCQUFpQjtFQUNqQixpQkFBaUI7QUFDbkI7QUFFQTtFQUNFLFNBQVM7QUFDWCIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBBZGQgcm91bmRlZCBjb3JuZXJzIHRvIHRoZSB0b3AgbGVmdCBhbmQgdGhlICovXG4uY29udGVudHtcbiAgYmFja2dyb3VuZDogdmFyKC0tdGhpcmQtY29sb3IpO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS10aGlyZC1jb2xvcik7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbi5mZWF0dXJlIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBoZWlnaHQ6IDgwMHB4O1xuICB3aWR0aDogYXV0bztcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tdGhpcmQtY29sb3IpO1xuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xufVxuXG4uZmVhdHVyZS1mb250IHtcbiAgZm9udC1mYW1pbHk6ICdSb2JvdG8nLCAnSGVsdmV0aWNhJywgJ0FyaWFsJywgc2Fucy1zZXJpZjtcbiAgbGluZS1oZWlnaHQ6IDE7XG4gIGNvbG9yOiB2YXIoLS10aGlyZC1jb2xvcik7XG4gIGZvbnQtd2VpZ2h0OiA1MDA7XG4gIGZvbnQtc2l6ZTogNTBweDtcbn1cblxuLnNsb2dhbiB7XG4gIGZvbnQtc2l6ZTogNjBweDtcbiAgcGFkZGluZy10b3A6IDE2MHB4O1xufVxuXG4uc3ViLXNsb2dhbiB7XG4gIGZvbnQtc2l6ZTogMjFweDtcbiAgbWFyZ2luOiAwIDE2cHg7XG4gIHBhZGRpbmctdG9wOiA4cHg7XG59XG5cbi5naXRodWItbGluayB7XG4gIGZvbnQtc2l6ZTogMjFweDtcbiAgcGFkZGluZy10b3A6IDQwMHB4O1xufVxuXG4uZ2l0aHViLWxpbmsgYSB7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgY29sb3I6IHZhcigtLXRoaXJkLWNvbG9yKTtcbiAgZm9udC13ZWlnaHQ6IDMwMDtcbn1cblxuLyogR2lmcyBhcHBlYXIgd2hlbiBtb3VzZSBob3ZlcnMgb3ZlciB0aGVtICovXG4vKiByZWY6IGh0dHBzOi8vY29kZXBlbi5pby9RRGVsdGFFL3Blbi9WV0dZT0IgKi9cbi5zdGF0aWMge1xuICBwb3NpdGlvbjphYnNvbHV0ZTtcbiAgYmFja2dyb3VuZDogd2hpdGU7XG59XG5cbi5zdGF0aWM6aG92ZXIge1xuICBvcGFjaXR5OjA7XG59Il19 */");
 
 /***/ }),
 
@@ -547,6 +566,158 @@ var HomeComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_services_crud_service__WEBPACK_IMPORTED_MODULE_1__["CrudService"]])
     ], HomeComponent);
     return HomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/languages/languages.component.css":
+/*!**************************************************************!*\
+  !*** ./src/app/components/languages/languages.component.css ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("/* Three image containers (use 25% for four, and 50% for two, etc) */\n.column {\n    float: left;\n    top: 49px;\n    padding: 50px;\n}\n/* Clear floats after image containers */\n.row::after {\n    content: \"\";\n    clear: both;\n    display: table;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9sYW5ndWFnZXMvbGFuZ3VhZ2VzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsb0VBQW9FO0FBQ3BFO0lBQ0ksV0FBVztJQUNYLFNBQVM7SUFDVCxhQUFhO0FBQ2pCO0FBRUEsd0NBQXdDO0FBQ3hDO0lBQ0ksV0FBVztJQUNYLFdBQVc7SUFDWCxjQUFjO0FBQ2xCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9sYW5ndWFnZXMvbGFuZ3VhZ2VzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBUaHJlZSBpbWFnZSBjb250YWluZXJzICh1c2UgMjUlIGZvciBmb3VyLCBhbmQgNTAlIGZvciB0d28sIGV0YykgKi9cbi5jb2x1bW4ge1xuICAgIGZsb2F0OiBsZWZ0O1xuICAgIHRvcDogNDlweDtcbiAgICBwYWRkaW5nOiA1MHB4O1xufVxuXG4vKiBDbGVhciBmbG9hdHMgYWZ0ZXIgaW1hZ2UgY29udGFpbmVycyAqL1xuLnJvdzo6YWZ0ZXIge1xuICAgIGNvbnRlbnQ6IFwiXCI7XG4gICAgY2xlYXI6IGJvdGg7XG4gICAgZGlzcGxheTogdGFibGU7XG59Il19 */");
+
+/***/ }),
+
+/***/ "./src/app/components/languages/languages.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/components/languages/languages.component.ts ***!
+  \*************************************************************/
+/*! exports provided: LANGUAGES, LanguagesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LANGUAGES", function() { return LANGUAGES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LanguagesComponent", function() { return LanguagesComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+var LANGUAGES = [
+    {
+        name: 'linux',
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/869px-Tux.svg.png'
+    },
+    {
+        name: 'bash',
+        url: 'https://freesvg.org/img/1296126657.png'
+    },
+    {
+        name: 'git',
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1024px-Git_icon.svg.png'
+    },
+    {
+        name: 'gitlab',
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/GitLab_Logo.svg/1200px-GitLab_Logo.svg.png'
+    },
+    {
+        name: 'Github',
+        url: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
+    },
+    {
+        name: 'javascript',
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png'
+    },
+    {
+        name: 'typescript',
+        url: 'https://cdn.worldvectorlogo.com/logos/typescript.svg'
+    },
+    {
+        name: 'angular',
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1024px-Angular_full_color_logo.svg.png'
+    },
+    {
+        name: 'Vue',
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png'
+    },
+    {
+        name: 'firebase',
+        url: 'https://seeklogo.com/images/F/firebase-logo-402F407EE0-seeklogo.com.png'
+    },
+    {
+        name: 'java',
+        url: 'https://cpng.pikpng.com/pngl/s/204-2047555_datei-java-logo-svg-java-logo-svg-clipart.png'
+    },
+    {
+        name: 'haskell',
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Haskell-Logo.svg/800px-Haskell-Logo.svg.png'
+    },
+    {
+        name: 'ruby',
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/1024px-Ruby_logo.svg.png'
+    },
+    {
+        name: 'c',
+        url: 'https://seeklogo.com/images/C/c-logo-672525892C-seeklogo.com.png'
+    },
+    {
+        name: 'c++',
+        url: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Images_200px-ISO_C%2B%2B_Logo_svg.png'
+    },
+    {
+        name: 'psql',
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png'
+    },
+    {
+        name: 'mapserver',
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/MapServer_logo.svg/1200px-MapServer_logo.svg.png'
+    },
+    {
+        name: 'plantuml',
+        url: 'https://lh3.googleusercontent.com/agXY3BUcC-ngVh9Vg6gG46ezZ4y_rbM0vzzcx4YiOOOckUVwD9S31m5XsmS6RvJJYdymd1t4=w128-h128-e365'
+    },
+    {
+        name: 'unreal',
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/UE_Logo_Black_Centered.svg/940px-UE_Logo_Black_Centered.svg.png'
+    },
+    {
+        name: 'latex',
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1280px-LaTeX_logo.svg.png'
+    },
+    {
+        name: 'markdown',
+        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Markdown-mark-solid.svg/1280px-Markdown-mark-solid.svg.png'
+    },
+];
+var LanguagesComponent = /** @class */ (function () {
+    function LanguagesComponent() {
+        this._languages = LANGUAGES;
+    }
+    LanguagesComponent.prototype.ngOnInit = function () {
+    };
+    Object.defineProperty(LanguagesComponent.prototype, "languages", {
+        get: function () {
+            return this._languages;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    LanguagesComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-languages',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./languages.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/languages/languages.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./languages.component.css */ "./src/app/components/languages/languages.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [])
+    ], LanguagesComponent);
+    return LanguagesComponent;
 }());
 
 
