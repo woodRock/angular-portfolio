@@ -147,11 +147,11 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 
 var routes = [
-    { path: '', pathMatch: 'full', redirectTo: '/projects' },
     { path: 'code', component: _components_projects_projects_component__WEBPACK_IMPORTED_MODULE_3__["ProjectsComponent"], data: { animation: 'Home' } },
-    { path: 'person', component: _components_about_me_about_me_component__WEBPACK_IMPORTED_MODULE_2__["AboutMeComponent"], data: { animation: 'About' } },
     { path: 'language', component: _components_languages_languages_component__WEBPACK_IMPORTED_MODULE_5__["LanguagesComponent"], data: { animation: 'About' } },
+    { path: 'person', component: _components_about_me_about_me_component__WEBPACK_IMPORTED_MODULE_2__["AboutMeComponent"], data: { animation: 'About' } },
     { path: 'map', component: _components_corona_corona_component__WEBPACK_IMPORTED_MODULE_4__["CoronaComponent"], data: { animation: 'About' } },
+    { path: '', pathMatch: 'full', redirectTo: '/code' },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
