@@ -2,8 +2,6 @@
   margin-top: 10px;
   color: var(--third-color);
   background-color: var(--fourth-color);
-  position: fixed;
-  left: 49%;
 }
 
 .logo-font {

@@ -1,12 +1,12 @@
 <div class="sticky nav">
   <nav mat-tab-nav-bar class="right">
-    <div>
-      <p [class]="'main-title' + ' ' + 'logo-font' + ' '+'title'">{{title}}</p>
-    </div>
     <div class="button">
       <a *ngFor="let tab of tabs" mat-tab-link routerLinkActive #rla="routerLinkActive" [active]="rla.isActive" [routerLink]="tab.path">
         <i class="material-icons">{{ tab.path }}</i>
       </a>
+    </div>
+    <div class="button">
+      <p [class]="'main-title' + ' ' + 'logo-font' + ' '+'title'">{{ title }}</p>
     </div>
   </nav>
 </div>
