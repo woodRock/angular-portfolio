@@ -87,7 +87,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"sticky nav\">\n  <nav mat-tab-nav-bar class=\"right\">\n    <div>\n      <p [class]=\"'main-title' + ' ' + 'logo-font' + ' '+'title'\">{{title}}</p>\n    </div>\n    <div class=\"button\">\n      <a *ngFor=\"let tab of tabs\" mat-tab-link routerLinkActive #rla=\"routerLinkActive\" [active]=\"rla.isActive\" [routerLink]=\"tab.path\">\n        {{ capitalise(tab.path) }}\n      </a>\n    </div>\n  </nav>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"sticky nav\">\n  <nav mat-tab-nav-bar class=\"right\">\n    <div>\n      <p [class]=\"'main-title' + ' ' + 'logo-font' + ' '+'title'\">{{title}}</p>\n    </div>\n    <div class=\"button\">\n      <a *ngFor=\"let tab of tabs\" mat-tab-link routerLinkActive #rla=\"routerLinkActive\" [active]=\"rla.isActive\" [routerLink]=\"tab.path\">\n        <i class=\"material-icons\">{{ tab.path }}</i>\n      </a>\n    </div>\n  </nav>\n</div>\n");
 
 /***/ }),
 
@@ -148,10 +148,10 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 var routes = [
     { path: '', pathMatch: 'full', redirectTo: '/projects' },
-    { path: 'projects', component: _components_projects_projects_component__WEBPACK_IMPORTED_MODULE_3__["ProjectsComponent"], data: { animation: 'Home' } },
-    { path: 'about', component: _components_about_me_about_me_component__WEBPACK_IMPORTED_MODULE_2__["AboutMeComponent"], data: { animation: 'About' } },
-    { path: '</>', component: _components_languages_languages_component__WEBPACK_IMPORTED_MODULE_5__["LanguagesComponent"], data: { animation: 'About' } },
-    { path: 'corona', component: _components_corona_corona_component__WEBPACK_IMPORTED_MODULE_4__["CoronaComponent"], data: { animation: 'About' } },
+    { path: 'code', component: _components_projects_projects_component__WEBPACK_IMPORTED_MODULE_3__["ProjectsComponent"], data: { animation: 'Home' } },
+    { path: 'person', component: _components_about_me_about_me_component__WEBPACK_IMPORTED_MODULE_2__["AboutMeComponent"], data: { animation: 'About' } },
+    { path: 'language', component: _components_languages_languages_component__WEBPACK_IMPORTED_MODULE_5__["LanguagesComponent"], data: { animation: 'About' } },
+    { path: 'map', component: _components_corona_corona_component__WEBPACK_IMPORTED_MODULE_4__["CoronaComponent"], data: { animation: 'About' } },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
