@@ -6,11 +6,11 @@ import {CoronaComponent} from './components/corona/corona.component';
 import {LanguagesComponent} from './components/languages/languages.component';
 
 export const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/projects' },
   { path: 'code', component: ProjectsComponent, data: { animation: 'Home' } },
-  { path: 'person', component: AboutMeComponent, data: { animation: 'About' } },
   { path: 'language', component: LanguagesComponent, data: {animation: 'About'} },
+  { path: 'person', component: AboutMeComponent, data: { animation: 'About' } },
   { path: 'map', component: CoronaComponent, data: { animation: 'About' } },
+  { path: '', pathMatch: 'full', redirectTo: '/code' },
 ];
 
 @NgModule({
