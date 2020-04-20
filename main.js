@@ -150,7 +150,7 @@ var routes = [
     { path: '', pathMatch: 'full', redirectTo: '/projects' },
     { path: 'projects', component: _components_projects_projects_component__WEBPACK_IMPORTED_MODULE_3__["ProjectsComponent"], data: { animation: 'Home' } },
     { path: 'about', component: _components_about_me_about_me_component__WEBPACK_IMPORTED_MODULE_2__["AboutMeComponent"], data: { animation: 'About' } },
-    { path: 'languages', component: _components_languages_languages_component__WEBPACK_IMPORTED_MODULE_5__["LanguagesComponent"], data: { animation: 'About' } },
+    { path: '</>', component: _components_languages_languages_component__WEBPACK_IMPORTED_MODULE_5__["LanguagesComponent"], data: { animation: 'About' } },
     { path: 'corona', component: _components_corona_corona_component__WEBPACK_IMPORTED_MODULE_4__["CoronaComponent"], data: { animation: 'About' } },
 ];
 var AppRoutingModule = /** @class */ (function () {
