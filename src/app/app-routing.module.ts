@@ -7,10 +7,10 @@ import {LanguagesComponent} from './components/languages/languages.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/projects' },
-  { path: 'projects', component: ProjectsComponent, data: { animation: 'Home' } },
-  { path: 'about', component: AboutMeComponent, data: { animation: 'About' } },
-  { path: '</>', component: LanguagesComponent, data: {animation: 'About'} },
-  { path: 'corona', component: CoronaComponent, data: { animation: 'About' } },
+  { path: 'code', component: ProjectsComponent, data: { animation: 'Home' } },
+  { path: 'person', component: AboutMeComponent, data: { animation: 'About' } },
+  { path: 'language', component: LanguagesComponent, data: {animation: 'About'} },
+  { path: 'map', component: CoronaComponent, data: { animation: 'About' } },
 ];
 
 @NgModule({

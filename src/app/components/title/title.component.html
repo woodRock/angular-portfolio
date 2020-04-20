@@ -5,7 +5,7 @@
     </div>
     <div class="button">
       <a *ngFor="let tab of tabs" mat-tab-link routerLinkActive #rla="routerLinkActive" [active]="rla.isActive" [routerLink]="tab.path">
-        {{ capitalise(tab.path) }}
+        <i class="material-icons">{{ tab.path }}</i>
       </a>
     </div>
   </nav>
