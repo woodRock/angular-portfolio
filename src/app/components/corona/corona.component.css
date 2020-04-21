@@ -1,3 +1,7 @@
+.black {
+  background: black;
+}
+
 .content {
   margin: auto;
   background: var(--fourth-color);

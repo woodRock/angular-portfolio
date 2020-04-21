@@ -1,8 +1,10 @@
-<div>
-  <iframe id="iframe" [attr.src]="getURL()"></iframe>
-</div>
+<div class="black">
+  <div>
+    <iframe id="iframe" [attr.src]="getURL()"></iframe>
+  </div>
 
-<div *ngIf="loading" class="content" style="display: flex; justify-content: center; align-items: center">
-  <mat-progress-spinner color="primary" mode="indeterminate">
-  </mat-progress-spinner>
+  <div *ngIf="loading" class="content" style="display: flex; justify-content: center; align-items: center">
+    <mat-progress-spinner color="primary" mode="indeterminate">
+    </mat-progress-spinner>
+  </div>
 </div>

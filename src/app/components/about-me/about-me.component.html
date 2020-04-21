@@ -1,27 +1,9 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <app-home></app-home>
-<div class="project mdl-typography--text-center">
-  <div class="content mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <div class="projects">
-      <div class="mdl-grid">
-        <div *ngFor="let social of social"
-             id="first" class="card mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-          <div class="mdl-card__media card-image not-pink-please">
-            <img src="{{social.image}}" class="square" alt="Avatar">
-          </div>
-          <div class="mdl-card__title ">
-            <b>{{social.title}}</b>
-          </div>
-          <div class="mdl-card__supporting-text">
-            {{social.description}}
-          </div>
-          <div class="button mdl-card__actions">
-            <a class="mdl-button mdl-js-button mdl-typography--text-uppercase" href="{{social.link}}">
-              Visit
-              <i class="material-icons">chevron_right</i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="content">
+  <ul class="inline">
+    <li *ngFor="let social of social">
+      <a href="{{social.link}}" class="fa fa-{{social.title}}"></a>
+    </li>
+  </ul>
 </div>

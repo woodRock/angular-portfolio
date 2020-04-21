@@ -1,6 +1,6 @@
 /* Add rounded corners to the top left and the */
 .content{
-  background: var(--third-color);
+  background: black;
   background-color: var(--third-color);
   display: block;
   position: relative;

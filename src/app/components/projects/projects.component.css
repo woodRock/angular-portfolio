@@ -34,7 +34,7 @@ img {
 
 .content {
   margin: auto;
-  background: var(--fourth-color);
+  background: black;
   display: block;
   position: relative;
   top: 39px;

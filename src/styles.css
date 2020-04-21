@@ -20,3 +20,8 @@ header{
     display: flex;
     justify-content: center;
 }
+
+html, body{
+  background-color:#000000;
+  color:#0000FF;
+}

@@ -1,27 +1,29 @@
-<div class="content mdl-layout mdl-js-layout mdl-layout--fixed-header" [style.background-repeat]="'no-repeat'" [style.background-size]="'cover'" style="background-repeat: no-repeat">
-  <div class="projects">
-    <div class="mdl-grid">
-      <div *ngFor="let project of projects | sortgrid : '-time'" id="first" class="card mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-        <div class="mdl-card__media card-image not-pink-please">
-          <img src="{{project.image}}" class="square" alt="Avatar">
-        </div>
-        <div class="mdl-card__title">
-          <strong>
-            {{ getFolderName(project.title) }}
-          </strong>
-          <div class="mdl-card__subtitle-text">
-            |
-            {{ project.time | timeAgo }}
+<div class="content">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" [style.background-repeat]="'no-repeat'" [style.background-size]="'cover'" style="background-repeat: no-repeat">
+    <div class="projects">
+      <div class="mdl-grid">
+        <div *ngFor="let project of projects | sortgrid : '-time'" id="first" class="card mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+          <div class="mdl-card__media card-image not-pink-please">
+            <img src="{{project.image}}" class="square" alt="Avatar">
           </div>
-        </div>
-        <div class="mdl-card__supporting-text">
-          <div>{{project.description}}</div>
-        </div>
-        <div class="button mdl-card__actions">
-          <a class="mdl-button mdl-js-button mdl-typography--text-uppercase" href="{{project.link}}">
-            Source
-            <i class="material-icons">code</i>
-          </a>
+          <div class="mdl-card__title">
+            <strong>
+              {{ getFolderName(project.title) }}
+            </strong>
+            <div class="mdl-card__subtitle-text">
+              |
+              {{ project.time | timeAgo }}
+            </div>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <div>{{project.description}}</div>
+          </div>
+          <div class="button mdl-card__actions">
+            <a class="mdl-button mdl-js-button mdl-typography--text-uppercase" href="{{project.link}}">
+              Source
+              <i class="material-icons">code</i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
