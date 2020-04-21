@@ -38,10 +38,11 @@ export const LANGUAGES = [
     },
     {
         name: 'firebase',
-        url: 'https://seeklogo.com/images/F/firebase-logo-402F407EE0-seeklogo.com.png'},
+        url: 'https://seeklogo.com/images/F/firebase-logo-402F407EE0-seeklogo.com.png'
+    },
     {
         name: 'java',
-        url: 'https://cpng.pikpng.com/pngl/s/204-2047555_datei-java-logo-svg-java-logo-svg-clipart.png'
+        url: 'https://seeklogo.com/images/J/java-logo-7F8B35BAB3-seeklogo.com.png'
     },
     {
         name: 'haskell',
